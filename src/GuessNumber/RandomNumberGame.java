@@ -14,5 +14,9 @@ public class RandomNumberGame {
 		System.out.print("4. Expert\n");
 		System.out.print("5. Custom");
 	}
+	
+	public String getInput() {
+		return null;
+	}
 
 }
