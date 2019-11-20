@@ -39,6 +39,17 @@ class TestRandomNumberGame {
 	}
 	
 	@Test
+	void printMenuShouldReturnTwo() {
+	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+
+	    String input = "2";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+
+	    assertEquals(input, sut.printMenu());
+	}
+	
+	@Test
 	void printCustomOptionMaxShouldReturnTwenty() {
 	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
 

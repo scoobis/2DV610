@@ -10,13 +10,14 @@ public class RandomNumberGame {
 		rand = newRand;
 	}
 	
-	public void printMenu() {
+	public String printMenu() {
 		System.out.print("Set Level\n");
 		System.out.print("1. Easy\n");
 		System.out.print("2. Medium\n");
 		System.out.print("3. Hard\n");
 		System.out.print("4. Expert\n");
 		System.out.print("5. Custom");
+		return null;
 	}
 	
 	public String getInput() {
