@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class RandomNumberGame {
 	
-	public RandomNumberGame(RandomNumber rand) {
-		
+	RandomNumber rand;
+	
+	public RandomNumberGame(RandomNumber newRand) {
+		rand = newRand;
 	}
 	
 	public void printMenu() {
@@ -15,17 +17,17 @@ public class RandomNumberGame {
 		System.out.print("3. Hard\n");
 		System.out.print("4. Expert\n");
 		System.out.print("5. Custom");
-		// call getInput() after this function!
 	}
 	
 	public String getInput() {
 		Scanner s = new Scanner(System.in);
-		return s.nextLine();
+		while(s.hasNextLine()) { return s.nextLine(); }
+		return null;
 	}
 	
-	public void printCustomOptionMax() {
+	public String printCustomOptionMax() {
 		System.out.print("Set max value: ");
-		// call getInput() after this function!
+		return null;
 	}
 	
 	public void printCustomOptionMin() {
