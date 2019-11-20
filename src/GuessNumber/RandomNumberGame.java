@@ -1,5 +1,7 @@
 package GuessNumber;
 
+import java.util.Scanner;
+
 public class RandomNumberGame {
 	
 	public RandomNumberGame(RandomNumber rand) {
@@ -16,7 +18,8 @@ public class RandomNumberGame {
 	}
 	
 	public String getInput() {
-		return "2";
+		Scanner s = new Scanner(System.in);
+		return s.nextLine();
 	}
 
 }

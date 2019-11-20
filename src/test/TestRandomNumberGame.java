@@ -28,7 +28,7 @@ class TestRandomNumberGame {
 	}
 	
 	@Test
-	void menuShouldReturnOption() {
+	void getInputShouldReturnOption() {
 	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
 
 	    String input = "2";
