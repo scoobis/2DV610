@@ -61,7 +61,7 @@ class TestNumber {
 	}
 	
 	@Test
-	void ExpertLevelShouldBeBetweenOneAndTwenty() {
+	void ExpertLevelShouldBeBetweenOneAndHundred() {
 		RandomNumber sut = new RandomNumber();
 		sut.setExpertLevel();
 		
