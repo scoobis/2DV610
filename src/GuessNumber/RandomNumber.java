@@ -32,6 +32,6 @@ public class RandomNumber {
 	}
 	
 	public void setExpertLevel() {
-		
+		max = 100;
 	}
 }
