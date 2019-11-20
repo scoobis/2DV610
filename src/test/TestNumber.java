@@ -49,5 +49,15 @@ class TestNumber {
 		
 		assertTrue(actual >= 1  && actual <= 20);
 	}
+	
+	@Test
+	void HardLevelShouldBeBetweenOneAndTwenty() {
+		RandomNumber sut = new RandomNumber();
+		sut.setHardLevel();
+		
+		int actual = sut.getRandomNumber();
+		
+		assertTrue(actual >= 1  && actual <= 30);
+	}
 
 }
