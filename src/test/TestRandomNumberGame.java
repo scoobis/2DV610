@@ -35,7 +35,22 @@ class TestRandomNumberGame {
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 
-	    assertEquals("2", sut.getInput());
+	    assertEquals(input, sut.getInput());
 	}
+	
+	@Test
+	void customOptionMaxShouldSetMaxValue() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+	    sut.printMenu();
+	    
+	    String expected = "Set max value: ";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
+	
+	
 
 }
