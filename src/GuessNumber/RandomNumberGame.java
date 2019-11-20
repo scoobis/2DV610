@@ -15,6 +15,7 @@ public class RandomNumberGame {
 		System.out.print("3. Hard\n");
 		System.out.print("4. Expert\n");
 		System.out.print("5. Custom");
+		// call getInput() after this function!
 	}
 	
 	public String getInput() {
@@ -30,6 +31,9 @@ public class RandomNumberGame {
 	public void printCustomOptionMin() {
 		System.out.print("Set min value: ");
 		// call getInput() after this function!
+	}
+	
+	public void displayGuessNumber() {
 	}
 }
 

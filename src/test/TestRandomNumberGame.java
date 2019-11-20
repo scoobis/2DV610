@@ -63,5 +63,18 @@ class TestRandomNumberGame {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void diplayGuessNumberShouldPrintGuessNumber() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+	    sut.displayGuessNumber();
+	    
+	    String expected = "Guess number: ";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 
 }
