@@ -39,6 +39,17 @@ class TestRandomNumberGame {
 	}
 	
 	@Test
+	void printCustomOptionMaxShouldReturnTwenty() {
+	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+
+	    String input = "20";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+
+	    assertEquals(input, sut.printCustomOptionMax());
+	}
+	
+	@Test
 	void customOptionMaxShouldPrintSetValue() {
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));
