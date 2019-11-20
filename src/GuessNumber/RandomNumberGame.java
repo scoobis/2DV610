@@ -34,7 +34,7 @@ public class RandomNumberGame {
 	}
 	
 	public void displayGuessNumber() {
-		System.out.println("Guess number: ");
+		System.out.print("Guess number: ");
 	}
 }
 
