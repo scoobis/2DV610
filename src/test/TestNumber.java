@@ -41,7 +41,7 @@ class TestNumber {
 	}
 	
 	@Test
-	void MediumLevelShouldBeBetweenOneAndTen() {
+	void MediumLevelShouldBeBetweenOneAndTwenty() {
 		RandomNumber sut = new RandomNumber();
 		sut.setMediumLevel();
 		
