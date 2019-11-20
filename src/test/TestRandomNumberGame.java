@@ -39,7 +39,7 @@ class TestRandomNumberGame {
 	}
 	
 	@Test
-	void customOptionMaxShouldSetMaxValue() {
+	void customOptionMaxShouldPrintSetValue() {
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));
 	    
@@ -51,6 +51,17 @@ class TestRandomNumberGame {
 	    assertEquals(expected, outContent.toString());
 	}
 	
-	
+	@Test
+	void customOptionMinShouldPrintSetValue() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+	    sut.printCustomOptionMax();
+	    
+	    String expected = "Set min value: ";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 
 }
