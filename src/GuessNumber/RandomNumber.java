@@ -30,4 +30,8 @@ public class RandomNumber {
 		max = 30;
 		min = 1;
 	}
+	
+	public void setExpertLevel() {
+		
+	}
 }

@@ -59,5 +59,15 @@ class TestNumber {
 		
 		assertTrue(actual >= 1  && actual <= 30);
 	}
+	
+	@Test
+	void ExpertLevelShouldBeBetweenOneAndTwenty() {
+		RandomNumber sut = new RandomNumber();
+		sut.setExpertLevel();
+		
+		int actual = sut.getRandomNumber();
+		
+		assertTrue(actual >= 1  && actual <= 100);
+	}
 
 }
