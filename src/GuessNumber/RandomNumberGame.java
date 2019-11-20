@@ -27,7 +27,7 @@ public class RandomNumberGame {
 	
 	public String printCustomOptionMax() {
 		System.out.print("Set max value: ");
-		return "20";
+		return getInput();
 	}
 	
 	public void printCustomOptionMin() {
