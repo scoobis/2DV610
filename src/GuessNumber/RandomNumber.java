@@ -27,6 +27,6 @@ public class RandomNumber {
 	}
 	
 	public void setHardLevel() {
-		
+		max = 30;
 	}
 }
