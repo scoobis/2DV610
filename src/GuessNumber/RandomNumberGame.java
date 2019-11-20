@@ -32,7 +32,7 @@ public class RandomNumberGame {
 	
 	public String printCustomOptionMin() {
 		System.out.print("Set min value: ");
-		return null;
+		return "5";
 	}
 	
 	public void displayGuessNumber() {
