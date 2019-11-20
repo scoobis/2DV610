@@ -57,7 +57,7 @@ class TestRandomNumberGame {
 	    System.setOut(new PrintStream(outContent));
 	    
 	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
-	    sut.printCustomOptionMax();
+	    sut.printCustomOptionMin();
 	    
 	    String expected = "Set min value: ";
 	    
