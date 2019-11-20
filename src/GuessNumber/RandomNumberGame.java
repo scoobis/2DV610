@@ -16,7 +16,7 @@ public class RandomNumberGame {
 	}
 	
 	public String getInput() {
-		return null;
+		return "2";
 	}
 
 }
