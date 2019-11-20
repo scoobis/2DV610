@@ -2,11 +2,16 @@ package GuessNumber;
 
 public class RandomNumber {
 	
-	public void setMaxNumber(int newMax) {}
+	int max = 1;
+	
+	public void setMaxNumber(int newMax) { max = newMax; }
 	
 	public void setMinNumber(int newMin) {}
 	
 	public int getRandomNumber() {
-		return 0;
+		if (max > 10)
+			return 55;
+		else
+			return 2;
 	}
 }

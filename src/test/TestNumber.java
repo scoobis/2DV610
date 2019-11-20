@@ -22,8 +22,8 @@ class TestNumber {
 	@Test
 	void randomNumberShouldBeBetweenTenAndHundred() {
 		RandomNumber sut = new RandomNumber();
-		sut.setMaxNumber(10);
-		sut.setMinNumber(100);
+		sut.setMaxNumber(100);
+		sut.setMinNumber(10);
 		
 		int actual = sut.getRandomNumber();
 		
