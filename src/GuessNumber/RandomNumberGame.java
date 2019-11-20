@@ -29,5 +29,7 @@ public class RandomNumberGame {
 	
 	public void printCustomOptionMin() {
 		System.out.print("Set min value: ");
+		// call getInput() after this function!
 	}
 }
+
