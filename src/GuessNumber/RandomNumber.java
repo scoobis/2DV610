@@ -18,5 +18,6 @@ public class RandomNumber {
 	
 	public void setEasyLevel() {
 		max = 10;
+		min = 1;
 	}
 }
