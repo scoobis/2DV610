@@ -50,6 +50,17 @@ class TestRandomNumberGame {
 	}
 	
 	@Test
+	void printCustomOptionMinShouldReturnFive() {
+	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+
+	    String input = "5";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+
+	    assertEquals(input, sut.printCustomOptionMin());
+	}
+	
+	@Test
 	void customOptionMaxShouldPrintSetValue() {
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));

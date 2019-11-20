@@ -30,9 +30,9 @@ public class RandomNumberGame {
 		return getInput();
 	}
 	
-	public void printCustomOptionMin() {
+	public String printCustomOptionMin() {
 		System.out.print("Set min value: ");
-		// call getInput() after this function!
+		return null;
 	}
 	
 	public void displayGuessNumber() {
