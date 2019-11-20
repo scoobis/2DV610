@@ -98,5 +98,16 @@ class TestRandomNumberGame {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void displyGuessNumberShouldReturnTen() {
+		RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+
+	    String input = "10";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+
+	    assertEquals(input, sut.displayGuessNumber());
+	}
 
 }

@@ -35,8 +35,9 @@ public class RandomNumberGame {
 		return getInput();
 	}
 	
-	public void displayGuessNumber() {
+	public String displayGuessNumber() {
 		System.out.print("Guess number: ");
+		return null;
 	}
 }
 
