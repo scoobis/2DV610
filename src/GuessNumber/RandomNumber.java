@@ -1,17 +1,18 @@
 package GuessNumber;
 
+import java.util.Random;
+
 public class RandomNumber {
 	
 	int max = 1;
+	int min = 1;
 	
-	public void setMaxNumber(int newMax) { max = newMax; }
+	public void setMaxNumber(int newMax) { max = newMax +1; }
 	
-	public void setMinNumber(int newMin) {}
+	public void setMinNumber(int newMin) { min = newMin; }
 	
 	public int getRandomNumber() {
-		if (max > 10)
-			return 55;
-		else
-			return 2;
+		Random rand = new Random();
+		return rand.nextInt(max-min) + min;
 	}
 }
