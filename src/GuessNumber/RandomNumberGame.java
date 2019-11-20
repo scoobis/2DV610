@@ -21,5 +21,9 @@ public class RandomNumberGame {
 		Scanner s = new Scanner(System.in);
 		return s.nextLine();
 	}
+	
+	public void printCustomOptionMax() {
+		System.out.print("Set max value: ");
+	}
 
 }

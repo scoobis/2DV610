@@ -44,7 +44,7 @@ class TestRandomNumberGame {
 	    System.setOut(new PrintStream(outContent));
 	    
 	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
-	    sut.printMenu();
+	    sut.printCustomOptionMax();
 	    
 	    String expected = "Set max value: ";
 	    
