@@ -7,7 +7,12 @@ public class RandomNumberGame {
 	}
 	
 	public void printMenu() {
-		System.out.print("Set Level\n1. Easy\n2. Medium\n3. Hard\n4. Expert\n5. Custom");
+		System.out.print("Set Level\n");
+		System.out.print("1. Easy\n");
+		System.out.print("2. Medium\n");
+		System.out.print("3. Hard\n");
+		System.out.print("4. Expert\n");
+		System.out.print("5. Custom");
 	}
 
 }
