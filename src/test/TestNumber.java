@@ -29,5 +29,15 @@ class TestNumber {
 		
 		assertTrue(actual >= 10  && actual <= 100);
 	}
+	
+	@Test
+	void easyLevelShouldBeBetweenOneAndTen() {
+		RandomNumber sut = new RandomNumber();
+		sut.setEasyLevel();
+		
+		int actual = sut.getRandomNumber();
+		
+		assertTrue(actual >= 1  && actual <= 10);
+	}
 
 }

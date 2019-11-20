@@ -15,4 +15,8 @@ public class RandomNumber {
 		Random rand = new Random();
 		return rand.nextInt(max-min) + min;
 	}
+	
+	public void setEasyLevel() {
+		
+	}
 }
