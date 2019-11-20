@@ -20,4 +20,8 @@ public class RandomNumber {
 		max = 10;
 		min = 1;
 	}
+	
+	public void setMediumLevel() {
+		
+	}
 }

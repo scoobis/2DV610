@@ -39,5 +39,15 @@ class TestNumber {
 		
 		assertTrue(actual >= 1  && actual <= 10);
 	}
+	
+	@Test
+	void MediumLevelShouldBeBetweenOneAndTen() {
+		RandomNumber sut = new RandomNumber();
+		sut.setMediumLevel();
+		
+		int actual = sut.getRandomNumber();
+		
+		assertTrue(actual >= 1  && actual <= 20);
+	}
 
 }
