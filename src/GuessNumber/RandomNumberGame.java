@@ -26,8 +26,7 @@ public class RandomNumberGame {
 		
 		if (option == 1) { rand.setEasyLevel(); }
 		else if (option == 2) { rand.setMediumLevel(); }
-		else
-			rand.setHardLevel();
+		else if (option == 3) { rand.setHardLevel(); }
 	}
 	
 	public String getInput() {
