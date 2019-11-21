@@ -21,7 +21,10 @@ public class RandomNumberGame {
 	}
 	
 	public void setDifficulity() {
-		rand.setEasyLevel();
+		String temp = getInput();
+		int option = Integer.parseInt(temp);
+		
+		if (option == 1) { rand.setEasyLevel(); }
 	}
 	
 	public String getInput() {
