@@ -25,8 +25,7 @@ public class RandomNumberGame {
 		int option = Integer.parseInt(temp);
 		
 		if (option == 1) { rand.setEasyLevel(); }
-		else
-			rand.setMediumLevel();
+		else if (option == 2) { rand.setMediumLevel(); }
 	}
 	
 	public String getInput() {
