@@ -84,6 +84,21 @@ class TestRandomNumberGame {
 	}
 	
 	@Test
+	void setDifficulityShouldBeExpert() {
+		RandomNumber rand = new RandomNumber();
+	    RandomNumberGame sut = new RandomNumberGame(rand);
+
+	    String input = "4";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    sut.setDifficulity();
+	    int actual = rand.getRandomNumber();
+	    
+	    assertTrue(actual >= 1  && actual <= 100);
+	}
+	
+	@Test
 	void printMenuShouldReturnTwo() {
 	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
 
