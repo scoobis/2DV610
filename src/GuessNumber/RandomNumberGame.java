@@ -20,6 +20,9 @@ public class RandomNumberGame {
 		return getInput();
 	}
 	
+	public void setDifficulity() {
+	}
+	
 	public String getInput() {
 		Scanner s = new Scanner(System.in);
 		while(s.hasNextLine()) { return s.nextLine(); }
