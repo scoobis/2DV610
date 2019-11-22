@@ -63,5 +63,12 @@ class TestMath {
 		
 		assertEquals(80, sut.MediumMultiplication(4, 2, 10));
 	}
+	
+	@Test
+	void MediumDivisionShouldReturnTen() {
+		MathQuestions sut = new MathQuestions();
+		
+		assertEquals(10, sut.MediumDivision(100, 2, 2));
+	}
 
 }
