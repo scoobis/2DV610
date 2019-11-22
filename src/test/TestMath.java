@@ -35,5 +35,12 @@ class TestMath {
 		
 		assertEquals(sut.simpleDivision(20, 2), 10);
 	}
+	
+	@Test
+	void simpleExponentiationShouldReturnTwentyFive() {
+		MathQuestions sut = new MathQuestions();
+		
+		assertEquals(sut.squareRoot(5), 25);
+	}
 
 }
