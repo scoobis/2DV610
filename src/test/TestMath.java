@@ -56,5 +56,12 @@ class TestMath {
 		
 		assertEquals(10, sut.MediumSubtraction(30, 5, 5, 10));
 	}
+	
+	@Test
+	void MediumMultiplicationShouldReturnSeventy() {
+		MathQuestions sut = new MathQuestions();
+		
+		assertEquals(70, sut.MediumMultiplication(4, 3, 10));
+	}
 
 }
