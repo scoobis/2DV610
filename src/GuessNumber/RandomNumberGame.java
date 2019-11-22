@@ -20,8 +20,12 @@ public class RandomNumberGame {
 		return getInput();
 	}
 	
+	public boolean checkIfEqual(int guess, int randNr) {
+		return (Boolean) null;
+	}
+	
 	public void setDifficulity() {
-		String temp = getInput();
+		String temp = printMenu();
 		int option = Integer.parseInt(temp);
 		
 		if (option == 1) { rand.setEasyLevel(); }

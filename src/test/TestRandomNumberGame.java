@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import GuessNumber.RandomNumber;
 import GuessNumber.RandomNumberGame;
@@ -40,7 +41,7 @@ class TestRandomNumberGame {
 	
 	@Test
 	void setDifficulityShouldBeEasy() {
-		RandomNumber rand = new RandomNumber();
+		RandomNumber rand = Mockito.mock(RandomNumber.class);
 	    RandomNumberGame sut = new RandomNumberGame(rand);
 
 	    String input = "1";
@@ -48,6 +49,8 @@ class TestRandomNumberGame {
 	    System.setIn(in);
 	    
 	    sut.setDifficulity();
+	    
+	    Mockito.when(rand.getRandomNumber()).thenReturn(6);
 	    int actual = rand.getRandomNumber();
 	    
 	    assertTrue(actual >= 1  && actual <= 10);
@@ -55,7 +58,7 @@ class TestRandomNumberGame {
 	
 	@Test
 	void setDifficulityShouldBeMedium() {
-		RandomNumber rand = new RandomNumber();
+		RandomNumber rand = Mockito.mock(RandomNumber.class);
 	    RandomNumberGame sut = new RandomNumberGame(rand);
 
 	    String input = "2";
@@ -63,6 +66,7 @@ class TestRandomNumberGame {
 	    System.setIn(in);
 	    
 	    sut.setDifficulity();
+	    Mockito.when(rand.getRandomNumber()).thenReturn(17);
 	    int actual = rand.getRandomNumber();
 	    
 	    assertTrue(actual >= 1  && actual <= 20);
@@ -70,7 +74,7 @@ class TestRandomNumberGame {
 	
 	@Test
 	void setDifficulityShouldBeHard() {
-		RandomNumber rand = new RandomNumber();
+		RandomNumber rand = Mockito.mock(RandomNumber.class);
 	    RandomNumberGame sut = new RandomNumberGame(rand);
 
 	    String input = "3";
@@ -78,6 +82,7 @@ class TestRandomNumberGame {
 	    System.setIn(in);
 	    
 	    sut.setDifficulity();
+	    Mockito.when(rand.getRandomNumber()).thenReturn(24);
 	    int actual = rand.getRandomNumber();
 	    
 	    assertTrue(actual >= 1  && actual <= 30);
@@ -85,7 +90,7 @@ class TestRandomNumberGame {
 	
 	@Test
 	void setDifficulityShouldBeExpert() {
-		RandomNumber rand = new RandomNumber();
+		RandomNumber rand = Mockito.mock(RandomNumber.class);
 	    RandomNumberGame sut = new RandomNumberGame(rand);
 
 	    String input = "4";
@@ -93,6 +98,7 @@ class TestRandomNumberGame {
 	    System.setIn(in);
 	    
 	    sut.setDifficulity();
+	    Mockito.when(rand.getRandomNumber()).thenReturn(78);
 	    int actual = rand.getRandomNumber();
 	    
 	    assertTrue(actual >= 1  && actual <= 100);
@@ -179,6 +185,20 @@ class TestRandomNumberGame {
 	    System.setIn(in);
 
 	    assertEquals(input, sut.displayGuessNumber());
+	}
+	
+	@Test
+	void checkIfEqualShoudlReturnTrueWithEqualValues() {
+		RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+		
+		assertTrue(sut.checkIfEqual(15, 15));
+	}
+	
+	@Test
+	void checkIfEqualShoudlReturnFalseWithDifferentValues() {
+		RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+		
+		assertTrue(sut.checkIfEqual(15, 10));
 	}
 
 }
