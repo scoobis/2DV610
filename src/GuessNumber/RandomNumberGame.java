@@ -21,10 +21,7 @@ public class RandomNumberGame {
 	}
 	
 	public boolean checkIfEqual(int guess, int randNr) {
-		if (randNr == 10)
-			return false;
-		else
-			return true;
+		return guess == randNr;
 	}
 	
 	public void setDifficulity() {
