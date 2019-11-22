@@ -65,7 +65,7 @@ public class RandomNumberGame {
 	
 	public void displayState(int guess, int randNr) {
 		if (this.checkIfEqual(guess, randNr)) {
-			System.out.print("YOU WON!\n");
+			displayWon();
 		}
 	}
 }
