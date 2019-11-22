@@ -212,7 +212,7 @@ class TestRandomNumberGame {
 	}
 	
 	@Test
-	void displayToHighShouldPrintTooHigh() {
+	void displayTooHighShouldPrintTooHigh() {
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));
 	    
@@ -220,6 +220,19 @@ class TestRandomNumberGame {
 	    sut.displayToHigh();
 	    
 	    String expected = "Too high!\n";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	void displayTooLowShouldPrintTooLow() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+	    sut.displayTooLow();
+	    
+	    String expected = "Too low!\n";
 	    
 	    assertEquals(expected, outContent.toString());
 	}
