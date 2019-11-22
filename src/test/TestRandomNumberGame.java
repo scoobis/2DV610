@@ -271,7 +271,7 @@ class TestRandomNumberGame {
 	    System.setOut(new PrintStream(outContent));
 	    
 	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
-	    sut.displayState(10, 10);
+	    sut.displayState(10, 5);
 	    
 	    String expected = "Too high!\n";
 	    
