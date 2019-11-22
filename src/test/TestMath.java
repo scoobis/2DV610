@@ -49,5 +49,12 @@ class TestMath {
 		
 		assertEquals(10, sut.MediumAddition(1, 2, 3, 4));
 	}
+	
+	@Test
+	void MediumSubtractionShouldReturnTen() {
+		MathQuestions sut = new MathQuestions();
+		
+		assertEquals(10, sut.MediumSubtraction(30, 5, 5, 10));
+	}
 
 }
