@@ -14,5 +14,12 @@ class TestMath {
 		
 		assertEquals(sut.simpleAddition(5, 5), 10);
 	}
+	
+	@Test
+	void simpleSubtractionShouldReturnFive() {
+		MathQuestions sut = new MathQuestions();
+		
+		assertEquals(sut.simpleSubtraction(10, 5), 5);
+	}
 
 }
