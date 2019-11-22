@@ -14,6 +14,7 @@ public class Main {
 		
 		do {
 			guess = randomNumberGame.displayGuessNumber();
+			randomNumberGame.displayState(Integer.parseInt(guess), randNr);
 		} while(!randomNumberGame.checkIfEqual(Integer.parseInt(guess), randNr));
 	}
 }
