@@ -64,7 +64,7 @@ public class RandomNumberGame {
 	public void displayWon() { System.out.print("YOU WON!\n"); }
 	
 	public void displayState(int guess, int randNr) {
-		
+		System.out.print("YOU WON!\n");
 	}
 }
 
