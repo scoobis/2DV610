@@ -198,7 +198,7 @@ class TestRandomNumberGame {
 	void checkIfEqualShoudlReturnFalseWithDifferentValues() {
 		RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
 		
-		assertTrue(sut.checkIfEqual(15, 10));
+		assertFalse(sut.checkIfEqual(15, 10));
 	}
 
 }
