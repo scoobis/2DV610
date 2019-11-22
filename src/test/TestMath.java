@@ -68,7 +68,7 @@ class TestMath {
 	void MediumDivisionShouldReturnTen() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(10, sut.MediumDivision(100, 2, 2));
+		assertEquals(10, sut.MediumDivision(100, 5, 2));
 	}
 
 }
