@@ -265,7 +265,7 @@ class TestRandomNumberGame {
 	}
 	
 	@Test
-	void displayStateShouldReturnTooHighIfEqualsIsTrue() {
+	void displayStateShouldReturnTooHighIfGuessIsTooHigh() {
 		
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));
@@ -274,6 +274,20 @@ class TestRandomNumberGame {
 	    sut.displayState(10, 5);
 	    
 	    String expected = "Too high!\n";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	void displayStateShouldReturnTooHighIfGuessIsTooLow() {
+		
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+	    sut.displayState(5, 10);
+	    
+	    String expected = "Too low!\n";
 	    
 	    assertEquals(expected, outContent.toString());
 	}
