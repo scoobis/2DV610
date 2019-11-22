@@ -69,7 +69,7 @@ public class RandomNumberGame {
 		} else if (guess > randNr) {
 			displayToHigh();
 		} else {
-			System.out.print("Too low!\n");
+			displayTooLow();
 		}
 	}
 }
