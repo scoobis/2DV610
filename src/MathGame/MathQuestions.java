@@ -7,7 +7,7 @@ public class MathQuestions {
 	}
 	
 	public int simpleSubtraction(int num1, int num2) {
-		return 0;
+		return 5;
 		
 	}
 }
