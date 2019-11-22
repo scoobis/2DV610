@@ -12,35 +12,35 @@ class TestMath {
 	void simpleAdditionShouldReturnTen() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(sut.simpleAddition(5, 5), 10);
+		assertEquals(10, sut.simpleAddition(5, 5));
 	}
 	
 	@Test
 	void simpleSubtractionShouldReturnFive() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(sut.simpleSubtraction(10, 5), 5);
+		assertEquals(5, sut.simpleSubtraction(10, 5));
 	}
 	
 	@Test
 	void simpleMultiplicationShouldReturnTwenty() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(sut.simpleMultiplication(10, 2), 20);
+		assertEquals(20, sut.simpleMultiplication(10, 2));
 	}
 	
 	@Test
 	void simpleDivisionShouldReturnTen() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(sut.simpleDivision(20, 2), 10);
+		assertEquals(10, sut.simpleDivision(20, 2));
 	}
 	
 	@Test
-	void simpleExponentiationShouldReturnTwentyFive() {
+	void SquareRootShouldReturnThree() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(sut.squareRoot(5), 25);
+		assertEquals(3, sut.squareRoot(9));
 	}
 
 }

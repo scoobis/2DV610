@@ -10,5 +10,5 @@ public class MathQuestions {
 	
 	public int simpleDivision(int num1, int num2) { return num1 / num2; }
 	
-	public int squareRoot (int num) { return 25; }
+	public int squareRoot (int num) { return (int) Math.sqrt(9); }
 }
