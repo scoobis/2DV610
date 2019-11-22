@@ -70,5 +70,12 @@ class TestMath {
 		
 		assertEquals(10, sut.MediumDivision(100, 5, 2));
 	}
+	
+	@Test
+	void cubeRootShouldReturnThree() {
+		MathQuestions sut = new MathQuestions();
+		
+		assertEquals(3, sut.cubeRoot(27));
+	}
 
 }
