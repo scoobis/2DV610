@@ -66,8 +66,11 @@ public class RandomNumberGame {
 	public void displayState(int guess, int randNr) {
 		if (this.checkIfEqual(guess, randNr)) {
 			displayWon();
-		} else if (guess > randNr)
+		} else if (guess > randNr) {
 			displayToHigh();
+		} else {
+			System.out.print("Too low!\n");
+		}
 	}
 }
 
