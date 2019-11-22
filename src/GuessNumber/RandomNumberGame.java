@@ -25,7 +25,7 @@ public class RandomNumberGame {
 	}
 	
 	public int getRandomNumber() {
-		return 8;
+		return rand.getRandomNumber();
 	}
 	
 	public void setDifficulity() {
