@@ -58,5 +58,9 @@ public class RandomNumberGame {
 		System.out.print("Guess number: ");
 		return getInput();
 	}
+	
+	public void displayToHigh() {
+		
+	}
 }
 

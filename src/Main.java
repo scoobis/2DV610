@@ -13,6 +13,6 @@ public class Main {
 		
 		do {
 			guess = randomNumberGame.displayGuessNumber();
-		} while(!randomNumberGame.checkIfEqual(Integer.parseInt(guess), 10));
+		} while(!randomNumberGame.checkIfEqual(Integer.parseInt(guess), randomNumberGame.getRandomNumber()));
 	}
 }

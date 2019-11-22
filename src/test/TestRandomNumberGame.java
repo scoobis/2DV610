@@ -210,5 +210,18 @@ class TestRandomNumberGame {
 		
 		assertEquals(sut.getRandomNumber(), 8);
 	}
+	
+	@Test
+	void displayToHighShouldPrintTooHigh() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+	    sut.displayToHigh();
+	    
+	    String expected = "Too high!\n";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 
 }
