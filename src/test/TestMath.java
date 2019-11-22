@@ -42,5 +42,12 @@ class TestMath {
 		
 		assertEquals(3, sut.squareRoot(9));
 	}
+	
+	@Test
+	void MediumAdditionShouldReturnTen() {
+		MathQuestions sut = new MathQuestions();
+		
+		assertEquals(10, sut.MediumAddition(1, 2, 3, 4));
+	}
 
 }
