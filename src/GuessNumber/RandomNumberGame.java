@@ -24,9 +24,7 @@ public class RandomNumberGame {
 		return guess == randNr;
 	}
 	
-	public int getRandomNumber() {
-		return rand.getRandomNumber();
-	}
+	public int getRandomNumber() { return rand.getRandomNumber(); }
 	
 	public void setDifficulity() {
 		String temp = printMenu();
@@ -59,12 +57,8 @@ public class RandomNumberGame {
 		return getInput();
 	}
 	
-	public void displayToHigh() {
-		System.out.print("Too high!\n");
-	}
+	public void displayToHigh() { System.out.print("Too high!\n"); }
 	
-	public void displayTooLow() {
-		System.out.print("Too low!\n");
-	}
+	public void displayTooLow() { System.out.print("Too low!\n"); }
 }
 
