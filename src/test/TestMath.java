@@ -21,5 +21,12 @@ class TestMath {
 		
 		assertEquals(sut.simpleSubtraction(10, 5), 5);
 	}
+	
+	@Test
+	void simpleMultiplicationShouldReturnTwenty() {
+		MathQuestions sut = new MathQuestions();
+		
+		assertEquals(sut.simpleMultiplication(10, 2), 20);
+	}
 
 }
