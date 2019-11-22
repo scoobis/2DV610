@@ -28,5 +28,12 @@ class TestMath {
 		
 		assertEquals(sut.simpleMultiplication(10, 2), 20);
 	}
+	
+	@Test
+	void simpleDivisionShouldReturnTen() {
+		MathQuestions sut = new MathQuestions();
+		
+		assertEquals(sut.simpleDivision(20, 2), 10);
+	}
 
 }
