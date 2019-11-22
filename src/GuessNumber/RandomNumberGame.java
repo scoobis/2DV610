@@ -60,5 +60,9 @@ public class RandomNumberGame {
 	public void displayToHigh() { System.out.print("Too high!\n"); }
 	
 	public void displayTooLow() { System.out.print("Too low!\n"); }
+	
+	public void displayWon() {
+		
+	}
 }
 

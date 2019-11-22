@@ -10,9 +10,10 @@ public class Main {
 		String guess;
 		
 		randomNumberGame.setDifficulity();
+		int randNr = randomNumberGame.getRandomNumber();
 		
 		do {
 			guess = randomNumberGame.displayGuessNumber();
-		} while(!randomNumberGame.checkIfEqual(Integer.parseInt(guess), randomNumberGame.getRandomNumber()));
+		} while(!randomNumberGame.checkIfEqual(Integer.parseInt(guess), randNr));
 	}
 }
