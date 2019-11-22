@@ -58,10 +58,10 @@ class TestMath {
 	}
 	
 	@Test
-	void MediumMultiplicationShouldReturnSeventy() {
+	void MediumMultiplicationShouldReturnEighty() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(70, sut.MediumMultiplication(4, 3, 10));
+		assertEquals(80, sut.MediumMultiplication(4, 2, 10));
 	}
 
 }
