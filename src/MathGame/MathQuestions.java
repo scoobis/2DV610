@@ -20,5 +20,5 @@ public class MathQuestions {
 	
 	public int MediumDivision(int num1, int num2, int num3) { return num1 / num2 / num3; }
 	
-	public int cubeRoot(int num) { return 3; }
+	public int cubeRoot(int num) { return (int) Math.cbrt(num); }
 }
