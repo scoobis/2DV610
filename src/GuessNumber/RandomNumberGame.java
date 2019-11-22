@@ -16,12 +16,16 @@ public class RandomNumberGame {
 		System.out.print("2. Medium\n");
 		System.out.print("3. Hard\n");
 		System.out.print("4. Expert\n");
-		System.out.print("5. Custom");
+		System.out.print("5. Custom\n");
 		return getInput();
 	}
 	
 	public boolean checkIfEqual(int guess, int randNr) {
 		return guess == randNr;
+	}
+	
+	public int getRandomNumber() {
+		return -1;
 	}
 	
 	public void setDifficulity() {

@@ -23,7 +23,7 @@ class TestRandomNumberGame {
 	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
 	    sut.printMenu();
 	    
-	    String expected = "Set Level\n1. Easy\n2. Medium\n3. Hard\n4. Expert\n5. Custom";
+	    String expected = "Set Level\n1. Easy\n2. Medium\n3. Hard\n4. Expert\n5. Custom\n";
 	    
 	    assertEquals(expected, outContent.toString());
 	}
@@ -188,17 +188,27 @@ class TestRandomNumberGame {
 	}
 	
 	@Test
-	void checkIfEqualShoudlReturnTrueWithEqualValues() {
+	void checkIfEqualShouldReturnTrueWithEqualValues() {
 		RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
 		
 		assertTrue(sut.checkIfEqual(15, 15));
 	}
 	
 	@Test
-	void checkIfEqualShoudlReturnFalseWithDifferentValues() {
+	void checkIfEqualShouldReturnFalseWithDifferentValues() {
 		RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
 		
 		assertFalse(sut.checkIfEqual(15, 10));
+	}
+	
+	@Test
+	void getRandomNumberShouldReturnCorrectValue() {
+		RandomNumber rand = Mockito.mock(RandomNumber.class);
+		RandomNumberGame sut = new RandomNumberGame(rand);
+		
+		Mockito.when(rand.getRandomNumber()).thenReturn(8);
+		
+		assertEquals(sut.getRandomNumber(), 8);
 	}
 
 }
