@@ -249,5 +249,19 @@ class TestRandomNumberGame {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void displayStateShouldReturnYouWonIfEqualsIsTrue() {
+		
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+	    sut.displayState(10, 10);
+	    
+	    String expected = "YOU WON!\n";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 
 }
