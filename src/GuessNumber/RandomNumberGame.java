@@ -60,7 +60,7 @@ public class RandomNumberGame {
 	}
 	
 	public void displayToHigh() {
-		
+		System.out.print("Too high!\n");
 	}
 }
 
