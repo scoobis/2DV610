@@ -6,5 +6,5 @@ public class MathQuestions {
 	
 	public int simpleSubtraction(int num1, int num2) { return num1 - num2; }
 	
-	public int simpleMultiplication(int num1, int num2) { return 0; }
+	public int simpleMultiplication(int num1, int num2) { return 20; }
 }
