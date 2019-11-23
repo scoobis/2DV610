@@ -39,6 +39,7 @@ public class MathGame {
 		Random rand = new Random(); 
 		question.simpleAddition(rand.nextInt(50), rand.nextInt(50));
 		question.simpleSubtraction(rand.nextInt(200), rand.nextInt(30));
+		question.simpleMultiplication(1, 2);
 	}
 	
 	public void mediumQuestions() {
