@@ -1,5 +1,6 @@
 package MathGame;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class MathGame {
@@ -35,7 +36,8 @@ public class MathGame {
 	}
 	
 	public void simpleQuestions() {
-		question.simpleAddition(12, 18);
+		Random rand = new Random(); 
+		question.simpleAddition(rand.nextInt(50), rand.nextInt(50));
 	}
 	
 	public void mediumQuestions() {
