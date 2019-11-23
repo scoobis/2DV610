@@ -56,7 +56,17 @@ class TestMathGame {
 		
 		spy.setDifficulity(1);
 		
-		 verify(spy).SimpleQuestions();
+		 verify(spy).simpleQuestions();
+	}
+	
+	@Test
+	void setDifficulityShouldCallMediumQuestions() {
+		MathGame sut = new MathGame();
+		MathGame spy = spy(sut);
+		
+		spy.setDifficulity(2);
+		
+		 verify(spy).mediumQuestions();
 	}
 
 }

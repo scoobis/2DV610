@@ -20,11 +20,15 @@ public class MathGame {
 	
 	public void setDifficulity(int option) {
 		if (option == 1) {
-			SimpleQuestions();
+			simpleQuestions();
 		}
 	}
 	
-	public void SimpleQuestions() {
+	public void simpleQuestions() {
+		
+	}
+	
+	public void mediumQuestions() {
 		
 	}
 }
