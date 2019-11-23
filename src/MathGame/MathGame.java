@@ -41,7 +41,7 @@ public class MathGame {
 		question.simpleSubtraction(rand.nextInt(200), rand.nextInt(30));
 		question.simpleMultiplication(rand.nextInt(10), rand.nextInt(10));
 		question.simpleDivision(rand.nextInt(50), rand.nextInt(10));
-		question.squareRoot(100);
+		question.squareRoot(rand.nextInt(100));
 	}
 	
 	public void mediumQuestions() {
