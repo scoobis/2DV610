@@ -8,4 +8,8 @@ public class MathGame {
 		System.out.print("2. Medium\n");
 		System.out.print("3. Advanced\n");
 	}
+	
+	public String getInput() {
+		return null;
+	}
 }
