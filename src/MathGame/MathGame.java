@@ -36,16 +36,18 @@ public class MathGame {
 	}
 	
 	public void simpleQuestions() {
+		String[] result = new String[5];
 		Random rand = new Random();
-		getInput();
+		
+		result[0] = getInput();
 		question.simpleAddition(rand.nextInt(50), rand.nextInt(50));
-		getInput();
+		result[1] = getInput();
 		question.simpleSubtraction(rand.nextInt(200), rand.nextInt(30));
-		getInput();
+		result[2] = getInput();
 		question.simpleMultiplication(rand.nextInt(10), rand.nextInt(10));
-		getInput();
+		result[3] = getInput();
 		question.simpleDivision(rand.nextInt(50), rand.nextInt(10));
-		getInput();
+		result[4] = getInput();
 		question.squareRoot(rand.nextInt(100));
 		
 	}
