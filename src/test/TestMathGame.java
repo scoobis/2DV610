@@ -88,5 +88,14 @@ class TestMathGame {
 		sut.simpleQuestions();
 		verify(math, times(1)).simpleAddition(anyInt(), anyInt());
 	}
+	
+	@Test
+	void simpleQuestionsShouldReturnsimpleSubtraction() {
+		MathQuestions math = mock(MathQuestions.class);
+		MathGame sut = new MathGame(math);
+		
+		sut.simpleQuestions();
+		verify(math, times(1)).simpleSubtraction(anyInt(), anyInt());
+	}
 
 }
