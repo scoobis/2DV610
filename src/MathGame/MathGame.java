@@ -33,4 +33,8 @@ public class MathGame {
 	public void mediumQuestions() {
 		
 	}
+	
+	public void advancedQuestions() {
+		
+	}
 }

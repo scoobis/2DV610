@@ -68,5 +68,15 @@ class TestMathGame {
 		
 		 verify(spy).mediumQuestions();
 	}
+	
+	@Test
+	void setDifficulityShouldCallAdvancedQuestions() {
+		MathGame sut = new MathGame();
+		MathGame spy = spy(sut);
+		
+		spy.setDifficulity(3);
+		
+		 verify(spy).advancedQuestions();
+	}
 
 }
