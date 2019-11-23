@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 public class MathGame {
 	
+	MathQuestions question;
+	
+	public MathGame(MathQuestions a_question) {
+		question = a_question;
+	}
+	
 	public String printMenu() {
 		System.out.print("Set Level\n");
 		System.out.print("1. Simple\n");

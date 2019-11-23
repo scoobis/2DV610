@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
 import MathGame.MathGame;
+import MathGame.MathQuestions;
 
 class TestMathGame {
 
@@ -19,7 +20,7 @@ class TestMathGame {
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));
 	    
-	    MathGame sut = new MathGame();
+	    MathGame sut = new MathGame(new MathQuestions());
 	    sut.printMenu();
 	    
 	    String expected = "Set Level\n1. Simple\n2. Medium\n3. Advanced\n";
@@ -29,7 +30,7 @@ class TestMathGame {
 	
 	@Test
 	void getInputShouldReturnOption() {
-	    MathGame sut = new MathGame();
+	    MathGame sut = new MathGame(new MathQuestions());
 
 	    String input = "2";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
@@ -40,7 +41,7 @@ class TestMathGame {
 	
 	@Test
 	void printMenuShouldReturnTwo() {
-	    MathGame sut = new MathGame();
+	    MathGame sut = new MathGame(new MathQuestions());
 
 	    String input = "2";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
@@ -51,7 +52,7 @@ class TestMathGame {
 	
 	@Test
 	void setDifficulityShouldCallSimpleQuestions() {
-		MathGame sut = new MathGame();
+		MathGame sut = new MathGame(new MathQuestions());
 		MathGame spy = spy(sut);
 		
 		spy.setDifficulity(1);
@@ -61,7 +62,7 @@ class TestMathGame {
 	
 	@Test
 	void setDifficulityShouldCallMediumQuestions() {
-		MathGame sut = new MathGame();
+		MathGame sut = new MathGame(new MathQuestions());
 		MathGame spy = spy(sut);
 		
 		spy.setDifficulity(2);
@@ -71,12 +72,21 @@ class TestMathGame {
 	
 	@Test
 	void setDifficulityShouldCallAdvancedQuestions() {
-		MathGame sut = new MathGame();
+		MathGame sut = new MathGame(new MathQuestions());
 		MathGame spy = spy(sut);
 		
 		spy.setDifficulity(3);
 		
 		 verify(spy).advancedQuestions();
+	}
+	
+	@Test
+	void simpleQuestionsShouldReturnSimpleAddition() {
+		MathQuestions math = mock(MathQuestions.class);
+		MathGame sut = new MathGame(math);
+		
+		sut.simpleQuestions();
+		verify(math, times(1)).simpleAddition(anyInt(), anyInt());
 	}
 
 }
