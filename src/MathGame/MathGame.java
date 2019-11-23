@@ -18,8 +18,10 @@ public class MathGame {
 		return null;
 	}
 	
-	public void setSimpleDifficulity() {
-		SimpleQuestions();
+	public void setDifficulity(int option) {
+		if (option == 1) {
+			SimpleQuestions();
+		}
 	}
 	
 	public void SimpleQuestions() {

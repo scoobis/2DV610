@@ -50,11 +50,11 @@ class TestMathGame {
 	}
 	
 	@Test
-	void setSimpleDifficulityShouldCallSimpleQuestions() {
+	void setDifficulityShouldCallSimpleQuestions() {
 		MathGame sut = new MathGame();
 		MathGame spy = spy(sut);
 		
-		spy.setSimpleDifficulity();
+		spy.setDifficulity(1);
 		
 		 verify(spy).SimpleQuestions();
 	}
