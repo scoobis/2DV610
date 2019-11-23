@@ -21,8 +21,9 @@ public class MathGame {
 	public void setDifficulity(int option) {
 		if (option == 1) {
 			simpleQuestions();
+		} else if (option == 2) {
+			mediumQuestions();
 		}
-		mediumQuestions();
 	}
 	
 	public void simpleQuestions() {
