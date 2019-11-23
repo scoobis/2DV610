@@ -23,8 +23,9 @@ public class MathGame {
 			simpleQuestions();
 		} else if (option == 2) {
 			mediumQuestions();
+		} else if (option == 3) {
+			advancedQuestions();
 		}
-		advancedQuestions();
 	}
 	
 	public void simpleQuestions() {
