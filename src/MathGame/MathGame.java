@@ -9,7 +9,7 @@ public class MathGame {
 		System.out.print("1. Simple\n");
 		System.out.print("2. Medium\n");
 		System.out.print("3. Advanced\n");
-		return null;
+		return "2";
 	}
 	
 	public String getInput() {
