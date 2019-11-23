@@ -90,12 +90,21 @@ class TestMathGame {
 	}
 	
 	@Test
-	void simpleQuestionsShouldReturnsimpleSubtraction() {
+	void simpleQuestionsShouldReturnSimpleSubtraction() {
 		MathQuestions math = mock(MathQuestions.class);
 		MathGame sut = new MathGame(math);
 		
 		sut.simpleQuestions();
 		verify(math, times(1)).simpleSubtraction(anyInt(), anyInt());
+	}
+	
+	@Test
+	void simpleQuestionsShouldReturnSimpleMultiplication() {
+		MathQuestions math = mock(MathQuestions.class);
+		MathGame sut = new MathGame(math);
+		
+		sut.simpleQuestions();
+		verify(math, times(1)).simpleMultiplication(anyInt(), anyInt());
 	}
 
 }
