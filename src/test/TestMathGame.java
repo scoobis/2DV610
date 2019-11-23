@@ -106,5 +106,14 @@ class TestMathGame {
 		sut.simpleQuestions();
 		verify(math, times(1)).simpleMultiplication(anyInt(), anyInt());
 	}
+	
+	@Test
+	void simpleQuestionsShouldReturnSimpleDivision() {
+		MathQuestions math = mock(MathQuestions.class);
+		MathGame sut = new MathGame(math);
+		
+		sut.simpleQuestions();
+		verify(math, times(1)).simpleDivision(anyInt(), anyInt());
+	}
 
 }
