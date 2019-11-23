@@ -124,5 +124,15 @@ class TestMathGame {
 		sut.simpleQuestions();
 		verify(math, times(1)).squareRoot(anyInt());
 	}
+	
+	@Test
+	void simpleQuestionsShouldCallGetInputFiveTimes() {
+		MathGame sut = new MathGame(new MathQuestions());
+		MathGame spy = spy(sut);
+		
+		spy.simpleQuestions();
+		
+		 verify(spy, times(5)).getInput();
+	}
 
 }
