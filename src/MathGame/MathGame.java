@@ -19,7 +19,7 @@ public class MathGame {
 	}
 	
 	public void setSimpleDifficulity() {
-		
+		SimpleQuestions();
 	}
 	
 	public void SimpleQuestions() {
