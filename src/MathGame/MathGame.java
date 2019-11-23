@@ -35,7 +35,7 @@ public class MathGame {
 	}
 	
 	public void simpleQuestions() {
-		
+		question.simpleAddition(12, 18);
 	}
 	
 	public void mediumQuestions() {
