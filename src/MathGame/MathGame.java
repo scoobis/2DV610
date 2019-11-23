@@ -22,6 +22,7 @@ public class MathGame {
 		if (option == 1) {
 			simpleQuestions();
 		}
+		mediumQuestions();
 	}
 	
 	public void simpleQuestions() {
