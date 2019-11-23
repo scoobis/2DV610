@@ -17,4 +17,12 @@ public class MathGame {
 		while(s.hasNextLine()) { return s.nextLine(); }
 		return null;
 	}
+	
+	public void setSimpleDifficulity() {
+		
+	}
+	
+	public void SimpleQuestions() {
+		
+	}
 }

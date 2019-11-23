@@ -8,6 +8,8 @@ import java.io.InputStream;
 import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.*;
+
 import MathGame.MathGame;
 
 class TestMathGame {
@@ -45,6 +47,16 @@ class TestMathGame {
 	    System.setIn(in);
 
 	    assertEquals(input, sut.printMenu());
+	}
+	
+	@Test
+	void setSimpleDifficulityShouldCallSimpleQuestions() {
+		MathGame sut = new MathGame();
+		MathGame spy = spy(sut);
+		
+		spy.setSimpleDifficulity();
+		
+		 verify(spy).SimpleQuestions();
 	}
 
 }
