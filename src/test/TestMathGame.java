@@ -35,5 +35,16 @@ class TestMathGame {
 
 	    assertEquals(input, sut.getInput());
 	}
+	
+	@Test
+	void printMenuShouldReturnTwo() {
+	    MathGame sut = new MathGame();
+
+	    String input = "2";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+
+	    assertEquals(input, sut.printMenu());
+	}
 
 }
