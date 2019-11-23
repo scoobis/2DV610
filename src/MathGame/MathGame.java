@@ -1,5 +1,7 @@
 package MathGame;
 
+import java.util.Scanner;
+
 public class MathGame {
 	
 	public void printMenu() {
@@ -10,6 +12,8 @@ public class MathGame {
 	}
 	
 	public String getInput() {
-		return "2";
+		Scanner s = new Scanner(System.in);
+		while(s.hasNextLine()) { return s.nextLine(); }
+		return null;
 	}
 }
