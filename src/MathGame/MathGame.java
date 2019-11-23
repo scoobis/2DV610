@@ -40,7 +40,7 @@ public class MathGame {
 		question.simpleAddition(rand.nextInt(50), rand.nextInt(50));
 		question.simpleSubtraction(rand.nextInt(200), rand.nextInt(30));
 		question.simpleMultiplication(rand.nextInt(10), rand.nextInt(10));
-		question.simpleDivision(1, 2);
+		question.simpleDivision(rand.nextInt(50), rand.nextInt(10));
 	}
 	
 	public void mediumQuestions() {
