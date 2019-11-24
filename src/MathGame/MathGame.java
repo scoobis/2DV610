@@ -48,6 +48,7 @@ public class MathGame {
 	
 	public boolean simpleSubtraction(int num1, int num2) {
 		int answer = question.simpleSubtraction(num1, num2);
+		System.out.print("5 - 5 = ");
 		String guess = getInput();
 		return answer == Integer.parseInt(guess);
 	}
