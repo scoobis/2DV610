@@ -35,11 +35,12 @@ public class MathGame {
 		}
 	}
 	
-	public String[] simpleQuestions() {
-		String[] result = new String[5];
-		Random rand = new Random();
-		
-		return result;
+	public int simpleQuestions() {
+		return 0;
+	}
+	
+	public boolean simpleAddition(int num1, int num2) {
+		return false;
 	}
 	
 	public void mediumQuestions() {

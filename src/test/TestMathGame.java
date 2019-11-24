@@ -81,18 +81,12 @@ class TestMathGame {
 	}
 	
 	@Test
-	void simpleQuestionsShouldCallGetInputFiveTimes() {
-		MathGame sut = new MathGame(new MathQuestions());
-		MathGame spy = spy(sut);
+	void simpleAdditionShouldReturnTrue() {
+		MathQuestions mock = mock(MathQuestions.class);
+		MathGame sut = new MathGame(mock);
 		
-		//** Makes the program not get stuck in loop
-		String input = "8";
-	    InputStream in = new ByteArrayInputStream(input.getBytes());
-	    System.setIn(in);
-	  //** Makes the program not get stuck in loop
+		when(mock.simpleAddition(anyInt(), anyInt())).thenReturn(10);
 		
-		spy.simpleQuestions();
-		
-		 verify(spy, times(5)).getInput();
+		assertTrue(sut.simpleAddition(5, 5));
 	}
 }
