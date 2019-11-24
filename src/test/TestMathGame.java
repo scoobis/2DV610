@@ -93,4 +93,17 @@ class TestMathGame {
 		
 		assertTrue(sut.simpleAddition(5, 5));
 	}
+	
+	@Test
+	void simpleAdditionShouldDisplayQuestion() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    MathGame sut = new MathGame(new MathQuestions());
+	    sut.simpleAddition(5, 5);
+	    
+	    String expected = "5 + 5 = ";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 }

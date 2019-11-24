@@ -22,7 +22,7 @@ public class MathGame {
 	public String getInput() {
 		Scanner s = new Scanner(System.in);
 		while(s.hasNextLine()) { return s.nextLine(); }
-		return null;
+		return "0";
 	}
 	
 	public void setDifficulity(int option) {
