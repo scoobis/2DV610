@@ -47,7 +47,7 @@ public class MathGame {
 	}
 	
 	public boolean simpleSubtraction(int num1, int num2) {
-		return false;
+		return true;
 	}
 	
 	public void mediumQuestions() {
