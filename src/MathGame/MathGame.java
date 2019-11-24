@@ -41,6 +41,7 @@ public class MathGame {
 	
 	public boolean simpleAddition(int num1, int num2) {
 		int answer = question.simpleAddition(num1, num2);
+		System.out.print("5 + 5 = ");
 		String guess = getInput();
 		return answer == Integer.parseInt(guess);
 	}
