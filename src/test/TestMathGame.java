@@ -81,58 +81,18 @@ class TestMathGame {
 	}
 	
 	@Test
-	void simpleQuestionsShouldReturnSimpleAddition() {
-		MathQuestions math = mock(MathQuestions.class);
-		MathGame sut = new MathGame(math);
-		
-		sut.simpleQuestions();
-		verify(math, times(1)).simpleAddition(anyInt(), anyInt());
-	}
-	
-	@Test
-	void simpleQuestionsShouldReturnSimpleSubtraction() {
-		MathQuestions math = mock(MathQuestions.class);
-		MathGame sut = new MathGame(math);
-		
-		sut.simpleQuestions();
-		verify(math, times(1)).simpleSubtraction(anyInt(), anyInt());
-	}
-	
-	@Test
-	void simpleQuestionsShouldReturnSimpleMultiplication() {
-		MathQuestions math = mock(MathQuestions.class);
-		MathGame sut = new MathGame(math);
-		
-		sut.simpleQuestions();
-		verify(math, times(1)).simpleMultiplication(anyInt(), anyInt());
-	}
-	
-	@Test
-	void simpleQuestionsShouldReturnSimpleDivision() {
-		MathQuestions math = mock(MathQuestions.class);
-		MathGame sut = new MathGame(math);
-		
-		sut.simpleQuestions();
-		verify(math, times(1)).simpleDivision(anyInt(), anyInt());
-	}
-	
-	@Test
-	void simpleQuestionsShouldReturnsquareRoot() {
-		MathQuestions math = mock(MathQuestions.class);
-		MathGame sut = new MathGame(math);
-		
-		sut.simpleQuestions();
-		verify(math, times(1)).squareRoot(anyInt());
-	}
-	
-	@Test
 	void simpleQuestionsShouldCallGetInputFiveTimes() {
 		MathGame sut = new MathGame(new MathQuestions());
 		MathGame spy = spy(sut);
+		
+		//** Makes the program not get stuck in loop
+		String input = "8";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	  //** Makes the program not get stuck in loop
 		
 		spy.simpleQuestions();
 		
 		 verify(spy, times(5)).getInput();
 	}
-
 }
