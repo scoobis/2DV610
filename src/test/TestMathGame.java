@@ -133,4 +133,18 @@ class TestMathGame {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void simpleMultiplicationShouldReturnTrue() {
+		MathQuestions mock = mock(MathQuestions.class);
+		MathGame sut = new MathGame(mock);
+		
+		String input = "20";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		when(mock.simpleMultiplication(anyInt(), anyInt())).thenReturn(20);
+		
+		assertTrue(sut.simpleMultiplication(4, 5));
+	}
 }
