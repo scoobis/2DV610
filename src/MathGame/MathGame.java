@@ -40,7 +40,7 @@ public class MathGame {
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {
-		return false;
+		return true;
 	}
 	
 	public void mediumQuestions() {
