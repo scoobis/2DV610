@@ -120,4 +120,17 @@ class TestMathGame {
 		
 		assertTrue(sut.simpleSubtraction(25, 5));
 	}
+	
+	@Test
+	void simpleSubtractionShouldDisplayQuestion() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    MathGame sut = new MathGame(new MathQuestions());
+	    sut.simpleSubtraction(5, 5);
+	    
+	    String expected = "5 - 5 = ";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 }
