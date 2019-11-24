@@ -40,7 +40,9 @@ public class MathGame {
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {
-		return true;
+		int answer = question.simpleAddition(num1, num2);
+		String guess = getInput();
+		return answer == Integer.parseInt(guess);
 	}
 	
 	public void mediumQuestions() {

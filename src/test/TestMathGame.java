@@ -85,6 +85,10 @@ class TestMathGame {
 		MathQuestions mock = mock(MathQuestions.class);
 		MathGame sut = new MathGame(mock);
 		
+		String input = "10";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
 		when(mock.simpleAddition(anyInt(), anyInt())).thenReturn(10);
 		
 		assertTrue(sut.simpleAddition(5, 5));
