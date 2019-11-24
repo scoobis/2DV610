@@ -106,4 +106,18 @@ class TestMathGame {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void simpleSubtractionShouldReturnTrue() {
+		MathQuestions mock = mock(MathQuestions.class);
+		MathGame sut = new MathGame(mock);
+		
+		String input = "20";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		when(mock.simpleSubtraction(anyInt(), anyInt())).thenReturn(20);
+		
+		assertTrue(sut.simpleSubtraction(25, 5));
+	}
 }

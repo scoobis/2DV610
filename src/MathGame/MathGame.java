@@ -46,6 +46,10 @@ public class MathGame {
 		return answer == Integer.parseInt(guess);
 	}
 	
+	public boolean simpleSubtraction(int num1, int num2) {
+		return false;
+	}
+	
 	public void mediumQuestions() {
 		
 	}
