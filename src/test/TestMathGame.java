@@ -302,4 +302,18 @@ class TestMathGame {
 		
 		assertTrue(sut.cubeRoot(64));
 	}
+	
+	@Test
+	void mediumQuestionsShouldCallMediumAddition() {
+		MathGame sut = new MathGame(new MathQuestions());
+		MathGame spy = spy(sut);
+		
+		String input = "8";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		 spy.mediumQuestions();
+		
+		 verify(spy, times(1)).mediumAddition(anyInt(), anyInt(), anyInt(), anyInt());
+	}
 }
