@@ -121,7 +121,7 @@ public class MathGame {
 	}
 	
 	public void mediumQuestions() {
-		
+		mediumAddition(1, 1, 1, 1);
 	}
 	
 	public void advancedQuestions() {
