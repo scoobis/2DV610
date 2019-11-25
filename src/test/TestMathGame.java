@@ -209,4 +209,21 @@ class TestMathGame {
 		
 		assertTrue(sut.squareRoot(81));
 	}
+	
+	@Test
+	void squareRootShouldDisplayQuestion() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    String input = "9";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    MathGame sut = new MathGame(new MathQuestions());
+	    sut.squareRoot(81);
+	    
+	    String expected = "\u221A81";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 }
