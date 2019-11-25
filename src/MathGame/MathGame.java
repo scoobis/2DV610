@@ -52,15 +52,18 @@ public class MathGame {
 	
 	public int mediumQuestions() {
 		Random rand = new Random();
-		mediumAddition(rand.nextInt(30), rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
-		mediumSubtraction(rand.nextInt(200-100) + 100, rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
-		mediumMultiplication(rand.nextInt(10), rand.nextInt(10), rand.nextInt(10));
-		mediumDivision(rand.nextInt(200-100) + 100, rand.nextInt(10), rand.nextInt(10));
+		int score = 0;
+		
+		if (mediumAddition(rand.nextInt(30), rand.nextInt(30), rand.nextInt(30), rand.nextInt(30))) { score++; }
+		if (mediumSubtraction(rand.nextInt(200-100) + 100, rand.nextInt(30), rand.nextInt(30), rand.nextInt(30))) { score++; }
+		if (mediumMultiplication(rand.nextInt(10), rand.nextInt(10), rand.nextInt(10))) { score++; }
+		if (mediumDivision(rand.nextInt(200-100) + 100, rand.nextInt(10), rand.nextInt(10))) { score++; }
+		
 		int cube = rand.nextInt(1000);
 		cube = question.cubeRoot(cube);
 		cube = cube * cube * cube;
-		cubeRoot(cube);
-		return 0;
+		if (cubeRoot(cube)) { score++; }
+		return score;
 	}
 	
 	public void advancedQuestions() {
