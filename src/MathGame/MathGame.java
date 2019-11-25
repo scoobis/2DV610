@@ -52,6 +52,7 @@ public class MathGame {
 		Random rand = new Random();
 		mediumAddition(rand.nextInt(30), rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
 		mediumSubtraction(rand.nextInt(200-100) + 100, rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
+		mediumMultiplication(1,1,1);
 	}
 	
 	public void advancedQuestions() {
