@@ -62,7 +62,7 @@ public class MathGame {
 	
 	public boolean simpleDivision(int num1, int num2) {
 		int answer =  question.simpleDivision(num1, num2);
-		System.out.print("80 / 2 = ");
+		System.out.print(num1 + " / " + num2 + " = ");
 		String guess = getInput();
 		return answer == Integer.parseInt(guess);
 	}
