@@ -115,7 +115,7 @@ public class MathGame {
 	}
 	
 	public boolean cubeRoot(int num) {
-		return false;
+		return question.cubeRoot(num) == 4;
 	}
 	
 	public void mediumQuestions() {
