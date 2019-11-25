@@ -99,4 +99,18 @@ class TestMathCalls {
 		
 		 verify(spy, times(1)).mediumAddition(anyInt(), anyInt(), anyInt(), anyInt());
 	}
+	
+	@Test
+	void mediumQuestionsShouldCallMediumSubtraction() {
+		MathGame sut = new MathGame(new MathQuestions());
+		MathGame spy = spy(sut);
+		
+		String input = "8";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		 spy.mediumQuestions();
+		
+		 verify(spy, times(1)).mediumSubtraction(anyInt(), anyInt(), anyInt(), anyInt());
+	}
 }
