@@ -22,7 +22,7 @@ public class MathGame {
 	public String getInput() {
 		Scanner s = new Scanner(System.in);
 		while(s.hasNextLine()) { return s.nextLine(); }
-		return "0";
+		return "-1";
 	}
 	
 	public void setDifficulity(int option) {
@@ -107,7 +107,9 @@ public class MathGame {
 	}
 	
 	public boolean mediumDivision(int num1, int num2, int num3) {
-		return question.mediumDivision(num1, num2, num3) == 5;
+		int answer = question.mediumDivision(num1, num2, num3);
+		
+		return validation(getInput(), answer);
 	}
 	
 	public void mediumQuestions() {
