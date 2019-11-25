@@ -109,6 +109,8 @@ public class MathGame {
 	public boolean mediumDivision(int num1, int num2, int num3) {
 		int answer = question.mediumDivision(num1, num2, num3);
 		
+		System.out.print("5 / 5 / 5 = ");
+		
 		return validation(getInput(), answer);
 	}
 	
