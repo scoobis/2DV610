@@ -135,5 +135,22 @@ class TestMathGameView {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void mediumDivisionShouldDisplayQuestion() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    String input = "1";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    MathGame sut = new MathGame(new MathQuestions());
+	    sut.mediumDivision(5, 5, 5);
+	    
+	    String expected = "5 / 5 / 5 = ";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 
 }
