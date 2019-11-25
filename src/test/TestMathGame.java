@@ -232,4 +232,18 @@ class TestMathGame {
 		
 		assertTrue(actual >= 0  && actual <= 5);
 	}
+	
+	@Test
+	void mediumQuestionsShouldCallMediumAddition() {
+		MathGame sut = new MathGame(new MathQuestions());
+		MathGame spy = spy(sut);
+		
+		String input = "8";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		 spy.simpleQuestions();
+		
+		 verify(spy, times(1)).mediumAddition(anyInt(), anyInt());
+	}
 }

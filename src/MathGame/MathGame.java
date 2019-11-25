@@ -40,8 +40,8 @@ public class MathGame {
 		int score = 0;
 		
 		if (simpleAddition(rand.nextInt(50), rand.nextInt(50))) { score++; }
-		if(simpleSubtraction(rand.nextInt(80-40) + 40, rand.nextInt(40))) { score++; }
-		if(simpleMultiplication(rand.nextInt(10), rand.nextInt(10))) { score++; }
+		if (simpleSubtraction(rand.nextInt(80-40) + 40, rand.nextInt(40))) { score++; }
+		if (simpleMultiplication(rand.nextInt(10), rand.nextInt(10))) { score++; }
 		if (simpleDivision(rand.nextInt(100-20) + 100, rand.nextInt(20))) { score++; }
 		if (squareRoot(rand.nextInt(100))) { score++; }
 		
@@ -81,6 +81,10 @@ public class MathGame {
 		System.out.print("\u221A"+num+ " = ");
 		String guess = getInput();
 		return answer == Integer.parseInt(guess);
+	}
+	
+	public boolean mediumAddition(int num1, int num2) {
+		return false;
 	}
 	
 	public void mediumQuestions() {

@@ -47,28 +47,28 @@ class TestMath {
 	void MediumAdditionShouldReturnTen() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(10, sut.MediumAddition(1, 2, 3, 4));
+		assertEquals(10, sut.mediumAddition(1, 2, 3, 4));
 	}
 	
 	@Test
 	void MediumSubtractionShouldReturnTen() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(10, sut.MediumSubtraction(30, 5, 5, 10));
+		assertEquals(10, sut.mediumSubtraction(30, 5, 5, 10));
 	}
 	
 	@Test
 	void MediumMultiplicationShouldReturnEighty() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(80, sut.MediumMultiplication(4, 2, 10));
+		assertEquals(80, sut.mediumMultiplication(4, 2, 10));
 	}
 	
 	@Test
 	void MediumDivisionShouldReturnTen() {
 		MathQuestions sut = new MathQuestions();
 		
-		assertEquals(10, sut.MediumDivision(100, 5, 2));
+		assertEquals(10, sut.mediumDivision(100, 5, 2));
 	}
 	
 	@Test
