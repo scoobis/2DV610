@@ -54,7 +54,9 @@ public class MathGame {
 	}
 	
 	public boolean simpleMultiplication(int num1, int num2) {
-		return 20 == question.simpleMultiplication(num1, num2);
+		int answer =  question.simpleMultiplication(num1, num2);
+		String guess = getInput();
+		return answer == Integer.parseInt(guess);
 	}
 	
 	public void mediumQuestions() {
