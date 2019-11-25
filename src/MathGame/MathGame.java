@@ -39,7 +39,7 @@ public class MathGame {
 		Random rand = new Random();
 		
 		simpleAddition(rand.nextInt(50), rand.nextInt(50));
-		simpleSubtraction(9, 3);
+		simpleSubtraction(rand.nextInt(80-40) + 40, rand.nextInt(40));
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {
