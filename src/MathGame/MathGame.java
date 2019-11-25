@@ -61,7 +61,7 @@ public class MathGame {
 	}
 	
 	public boolean simpleDivision(int num1, int num2) {
-		return false;
+		return question.simpleDivision(num1, num2) == 40;
 	}
 	
 	public void mediumQuestions() {
