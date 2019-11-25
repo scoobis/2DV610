@@ -95,19 +95,6 @@ class TestMathGame {
 	}
 	
 	@Test
-	void simpleAdditionShouldDisplayQuestion() {
-		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	    System.setOut(new PrintStream(outContent));
-	    
-	    MathGame sut = new MathGame(new MathQuestions());
-	    sut.simpleAddition(5, 5);
-	    
-	    String expected = "5 + 5 = ";
-	    
-	    assertEquals(expected, outContent.toString());
-	}
-	
-	@Test
 	void simpleSubtractionShouldReturnTrue() {
 		MathQuestions mock = mock(MathQuestions.class);
 		MathGame sut = new MathGame(mock);
@@ -119,19 +106,6 @@ class TestMathGame {
 		when(mock.simpleSubtraction(anyInt(), anyInt())).thenReturn(20);
 		
 		assertTrue(sut.simpleSubtraction(25, 5));
-	}
-	
-	@Test
-	void simpleSubtractionShouldDisplayQuestion() {
-		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	    System.setOut(new PrintStream(outContent));
-	    
-	    MathGame sut = new MathGame(new MathQuestions());
-	    sut.simpleSubtraction(5, 5);
-	    
-	    String expected = "5 - 5 = ";
-	    
-	    assertEquals(expected, outContent.toString());
 	}
 	
 	@Test
@@ -149,23 +123,6 @@ class TestMathGame {
 	}
 	
 	@Test
-	void simpleMultiplicationShouldDisplayQuestion() {
-		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	    System.setOut(new PrintStream(outContent));
-	    
-	    String input = "25";
-	    InputStream in = new ByteArrayInputStream(input.getBytes());
-	    System.setIn(in);
-	    
-	    MathGame sut = new MathGame(new MathQuestions());
-	    sut.simpleMultiplication(5, 5);
-	    
-	    String expected = "5 * 5 = ";
-	    
-	    assertEquals(expected, outContent.toString());
-	}
-	
-	@Test
 	void simpleDivisionShouldReturnTrue() {
 		MathQuestions mock = mock(MathQuestions.class);
 		MathGame sut = new MathGame(mock);
@@ -180,23 +137,6 @@ class TestMathGame {
 	}
 	
 	@Test
-	void simpleDivisionShouldDisplayQuestion() {
-		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	    System.setOut(new PrintStream(outContent));
-	    
-	    String input = "40";
-	    InputStream in = new ByteArrayInputStream(input.getBytes());
-	    System.setIn(in);
-	    
-	    MathGame sut = new MathGame(new MathQuestions());
-	    sut.simpleDivision(80, 2);
-	    
-	    String expected = "80 / 2 = ";
-	    
-	    assertEquals(expected, outContent.toString());
-	}
-	
-	@Test
 	void squareRootShouldReturnTrue() {
 		MathQuestions mock = mock(MathQuestions.class);
 		MathGame sut = new MathGame(mock);
@@ -208,24 +148,5 @@ class TestMathGame {
 		when(mock.squareRoot(anyInt())).thenReturn(9);
 		
 		assertTrue(sut.squareRoot(81));
-	}
-	
-	@Test
-	void squareRootShouldDisplayQuestion() {
-		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	    System.setOut(new PrintStream(outContent));
-	    
-	    String input = "9";
-	    InputStream in = new ByteArrayInputStream(input.getBytes());
-	    System.setIn(in);
-	    
-	    MathGame sut = new MathGame(new MathQuestions());
-	    sut.squareRoot(81);
-	    
-	    // NOTE you need to run with UTF-8
-	    // How to enable: Run -> Run configurations.. -> Common -> Other -> UTF-8
-	    String expected = "\u221A81 = ";
-	    
-	    assertEquals(expected, outContent.toString());
 	}
 }
