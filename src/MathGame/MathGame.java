@@ -85,7 +85,7 @@ public class MathGame {
 	
 	public boolean mediumAddition(int num1, int num2, int num3, int num4) {
 		int answer = question.mediumAddition(num1, num2, num3, num4);
-		System.out.print("5 + 5 + 5 + 5 = ");
+		System.out.print(num1+ " + " +num2+ " + " +num3+ " + " +num4+ " = ");
 		String guess = getInput();
 		return answer == Integer.parseInt(guess);
 	}
