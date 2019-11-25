@@ -61,7 +61,7 @@ class TestMathGame {
 		
 		spy.setDifficulity(1);
 		
-		 verify(spy).simpleQuestions();
+		verify(spy).simpleQuestions();
 	}
 	
 	@Test
@@ -71,7 +71,7 @@ class TestMathGame {
 		
 		spy.setDifficulity(2);
 		
-		 verify(spy).mediumQuestions();
+		verify(spy).mediumQuestions();
 	}
 	
 	@Test
@@ -81,7 +81,7 @@ class TestMathGame {
 		
 		spy.setDifficulity(3);
 		
-		 verify(spy).advancedQuestions();
+		verify(spy).advancedQuestions();
 	}
 	
 	@Test
@@ -163,7 +163,7 @@ class TestMathGame {
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 		
-		spy.simpleQuestions();
+		 spy.simpleQuestions();
 		
 		 verify(spy, times(1)).simpleAddition(anyInt(), anyInt());
 	}

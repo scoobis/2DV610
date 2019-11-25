@@ -36,6 +36,7 @@ public class MathGame {
 	}
 	
 	public int simpleQuestions() {
+		simpleAddition(1, 2);
 		return 0;
 	}
 	
