@@ -37,14 +37,15 @@ public class MathGame {
 	
 	public int simpleQuestions() {
 		Random rand = new Random();
+		int score = 0;
 		
-		simpleAddition(rand.nextInt(50), rand.nextInt(50));
-		simpleSubtraction(rand.nextInt(80-40) + 40, rand.nextInt(40));
-		simpleMultiplication(rand.nextInt(10), rand.nextInt(10));
-		simpleDivision(rand.nextInt(100-20) + 100, rand.nextInt(20));
-		squareRoot(rand.nextInt(100));
+		if (simpleAddition(rand.nextInt(50), rand.nextInt(50))) { score++; }
+		if(simpleSubtraction(rand.nextInt(80-40) + 40, rand.nextInt(40))) { score++; }
+		if(simpleMultiplication(rand.nextInt(10), rand.nextInt(10))) { score++; }
+		if (simpleDivision(rand.nextInt(100-20) + 100, rand.nextInt(20))) { score++; }
+		if (squareRoot(rand.nextInt(100))) { score++; }
 		
-		return 4;
+		return score;
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {
