@@ -42,7 +42,7 @@ public class MathGame {
 		if (simpleAddition(rand.nextInt(50), rand.nextInt(50))) { score++; }
 		if (simpleSubtraction(rand.nextInt(80-40) + 40, rand.nextInt(40))) { score++; }
 		if (simpleMultiplication(rand.nextInt(10), rand.nextInt(10))) { score++; }
-		if (simpleDivision(rand.nextInt(100-20) + 100, rand.nextInt(20))) { score++; }
+		if (simpleDivision(rand.nextInt(100-20) + 20, rand.nextInt(20))) { score++; }
 		if (squareRoot(rand.nextInt(100))) { score++; }
 		
 		return score;
@@ -51,7 +51,7 @@ public class MathGame {
 	public void mediumQuestions() {
 		Random rand = new Random();
 		mediumAddition(rand.nextInt(30), rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
-		mediumSubtraction(1,1,1,1);
+		mediumSubtraction(rand.nextInt(200-100) + 100, rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
 	}
 	
 	public void advancedQuestions() {
