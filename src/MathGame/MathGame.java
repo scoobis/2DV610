@@ -60,7 +60,7 @@ public class MathGame {
 		cube = question.cubeRoot(cube);
 		cube = cube * cube * cube;
 		cubeRoot(cube);
-		return -1;
+		return 0;
 	}
 	
 	public void advancedQuestions() {
