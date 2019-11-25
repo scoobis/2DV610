@@ -106,6 +106,10 @@ public class MathGame {
 		return validation(getInput(), answer);
 	}
 	
+	public boolean mediumDivision(int num1, int num2, int num3) {
+		return false;
+	}
+	
 	public void mediumQuestions() {
 		
 	}

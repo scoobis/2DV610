@@ -274,4 +274,18 @@ class TestMathGame {
 		
 		assertTrue(sut.mediumMultiplication(4, 5, 2));
 	}
+	
+	@Test
+	void mediumDivisionShouldReturnTrue() {
+		MathQuestions mock = mock(MathQuestions.class);
+		MathGame sut = new MathGame(mock);
+		
+		String input = "5";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		when(mock.mediumDivision(anyInt(), anyInt(), anyInt())).thenReturn(5);
+		
+		assertTrue(sut.mediumDivision(20, 2, 2));
+	}
 }
