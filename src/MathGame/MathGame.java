@@ -68,7 +68,7 @@ public class MathGame {
 	}
 	
 	public boolean squareRoot(int num) {
-		return false;
+		return question.squareRoot(num) == 9;
 	}
 	
 	public void mediumQuestions() {
