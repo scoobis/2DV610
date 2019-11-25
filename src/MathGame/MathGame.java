@@ -107,7 +107,7 @@ public class MathGame {
 	}
 	
 	public boolean mediumDivision(int num1, int num2, int num3) {
-		return false;
+		return question.mediumDivision(num1, num2, num3) == 5;
 	}
 	
 	public void mediumQuestions() {
