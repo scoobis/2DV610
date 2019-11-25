@@ -44,7 +44,7 @@ public class MathGame {
 		simpleDivision(rand.nextInt(100-20) + 100, rand.nextInt(20));
 		squareRoot(rand.nextInt(100));
 		
-		return 10;
+		return 4;
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {
