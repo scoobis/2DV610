@@ -42,6 +42,7 @@ public class MathGame {
 		simpleSubtraction(rand.nextInt(80-40) + 40, rand.nextInt(40));
 		simpleMultiplication(rand.nextInt(10), rand.nextInt(10));
 		simpleDivision(rand.nextInt(100-20) + 100, rand.nextInt(20));
+		squareRoot(81);
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {
