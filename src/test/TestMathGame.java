@@ -195,4 +195,18 @@ class TestMathGame {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void squareRootShouldReturnTrue() {
+		MathQuestions mock = mock(MathQuestions.class);
+		MathGame sut = new MathGame(mock);
+		
+		String input = "9";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		when(mock.squareRoot(anyInt())).thenReturn(9);
+		
+		assertTrue(sut.squareRoot(81));
+	}
 }

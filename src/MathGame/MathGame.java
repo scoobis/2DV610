@@ -67,6 +67,10 @@ public class MathGame {
 		return answer == Integer.parseInt(guess);
 	}
 	
+	public boolean squareRoot(int num) {
+		return false;
+	}
+	
 	public void mediumQuestions() {
 		
 	}
