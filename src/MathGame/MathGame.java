@@ -99,7 +99,7 @@ public class MathGame {
 	}
 	
 	public boolean mediumMultiplication(int num1, int num2, int num3) {
-		return false;
+		return question.mediumMultiplication(num1, num2, num3) == 40;
 	}
 	
 	public void mediumQuestions() {
