@@ -61,7 +61,9 @@ public class MathGame {
 	}
 	
 	public boolean simpleDivision(int num1, int num2) {
-		return question.simpleDivision(num1, num2) == 40;
+		int answer =  question.simpleDivision(num1, num2);
+		String guess = getInput();
+		return answer == Integer.parseInt(guess);
 	}
 	
 	public void mediumQuestions() {
