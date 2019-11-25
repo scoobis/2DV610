@@ -246,4 +246,18 @@ class TestMathGame {
 		
 		assertTrue(sut.mediumAddition(5, 5, 5, 5));
 	}
+	
+	@Test
+	void mediumSubtractionShouldReturnTrue() {
+		MathQuestions mock = mock(MathQuestions.class);
+		MathGame sut = new MathGame(mock);
+		
+		String input = "20";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		when(mock.mediumSubtraction(anyInt(), anyInt(), anyInt(), anyInt())).thenReturn(20);
+		
+		assertTrue(sut.mediumSubtraction(35, 5, 5, 5));
+	}
 }

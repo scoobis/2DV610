@@ -90,6 +90,10 @@ public class MathGame {
 		return answer == Integer.parseInt(guess);
 	}
 	
+	public boolean mediumSubtraction(int num1, int num2, int num3, int num4) {
+		return false;
+	}
+	
 	public void mediumQuestions() {
 		
 	}
