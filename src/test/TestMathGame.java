@@ -55,6 +55,10 @@ class TestMathGame {
 		MathGame sut = new MathGame(new MathQuestions());
 		MathGame spy = spy(sut);
 		
+		String input = "8";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
 		spy.setDifficulity(1);
 		
 		 verify(spy).simpleQuestions();
@@ -148,5 +152,19 @@ class TestMathGame {
 		when(mock.squareRoot(anyInt())).thenReturn(9);
 		
 		assertTrue(sut.squareRoot(81));
+	}
+	
+	@Test
+	void simpleQuestionsShouldCallSimpleAddition() {
+		MathGame sut = new MathGame(new MathQuestions());
+		MathGame spy = spy(sut);
+		
+		String input = "8";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		spy.simpleQuestions();
+		
+		 verify(spy, times(1)).simpleAddition(anyInt(), anyInt());
 	}
 }
