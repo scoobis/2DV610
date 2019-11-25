@@ -69,6 +69,7 @@ public class MathGame {
 	
 	public boolean squareRoot(int num) {
 		int answer = question.squareRoot(num);
+		System.out.print("\u221A81 = ");
 		String guess = getInput();
 		return answer == Integer.parseInt(guess);
 	}

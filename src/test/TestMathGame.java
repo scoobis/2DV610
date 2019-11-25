@@ -222,7 +222,9 @@ class TestMathGame {
 	    MathGame sut = new MathGame(new MathQuestions());
 	    sut.squareRoot(81);
 	    
-	    String expected = "\u221A81";
+	    // NOTE you need to run with UTF-8
+	    // How to enable: Run -> Run configurations.. -> Common -> Other -> UTF-8
+	    String expected = "\u221A81 = ";
 	    
 	    assertEquals(expected, outContent.toString());
 	}
