@@ -51,47 +51,49 @@ public class MathGame {
 	public boolean simpleAddition(int num1, int num2) {
 		int answer = question.simpleAddition(num1, num2);
 		System.out.print(num1 + " + " + num2 + " = ");
-		String guess = getInput();
-		return answer == Integer.parseInt(guess);
+		
+		return validation(getInput(), answer);
 	}
 	
 	public boolean simpleSubtraction(int num1, int num2) {
 		int answer = question.simpleSubtraction(num1, num2);
 		System.out.print(num1 + " - " + num2 + " = ");
-		String guess = getInput();
-		return answer == Integer.parseInt(guess);
+		
+		return validation(getInput(), answer);
 	}
 	
 	public boolean simpleMultiplication(int num1, int num2) {
 		int answer =  question.simpleMultiplication(num1, num2);
 		System.out.print(num1 + " * " + num2 + " = ");
-		String guess = getInput();
-		return answer == Integer.parseInt(guess);
+		
+		return validation(getInput(), answer);
 	}
 	
 	public boolean simpleDivision(int num1, int num2) {
 		int answer =  question.simpleDivision(num1, num2);
 		System.out.print(num1 + " / " + num2 + " = ");
-		String guess = getInput();
-		return answer == Integer.parseInt(guess);
+		
+		return validation(getInput(), answer);
 	}
 	
 	public boolean squareRoot(int num) {
 		int answer = question.squareRoot(num);
 		System.out.print("\u221A"+num+ " = ");
-		String guess = getInput();
-		return answer == Integer.parseInt(guess);
+		
+		return validation(getInput(), answer);
 	}
 	
 	public boolean mediumAddition(int num1, int num2, int num3, int num4) {
 		int answer = question.mediumAddition(num1, num2, num3, num4);
 		System.out.print(num1+ " + " +num2+ " + " +num3+ " + " +num4+ " = ");
-		String guess = getInput();
-		return answer == Integer.parseInt(guess);
+		
+		return validation(getInput(), answer);
 	}
 	
 	public boolean mediumSubtraction(int num1, int num2, int num3, int num4) {
-		return question.mediumSubtraction(num1, num2, num3, num4) == 20;
+		int answer = question.mediumSubtraction(num1, num2, num3, num4);
+		
+		return validation(getInput(), answer);
 	}
 	
 	public void mediumQuestions() {
@@ -100,5 +102,9 @@ public class MathGame {
 	
 	public void advancedQuestions() {
 		
+	}
+	
+	private boolean validation(String guess, int answer) {
+		return answer == Integer.parseInt(guess);
 	}
 }
