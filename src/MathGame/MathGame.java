@@ -55,7 +55,7 @@ public class MathGame {
 	
 	public boolean simpleMultiplication(int num1, int num2) {
 		int answer =  question.simpleMultiplication(num1, num2);
-		System.out.print("5 * 5 = ");
+		System.out.print(num1 + " * " + num2 + " = ");
 		String guess = getInput();
 		return answer == Integer.parseInt(guess);
 	}
