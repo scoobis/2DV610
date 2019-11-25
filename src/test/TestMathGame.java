@@ -232,4 +232,13 @@ class TestMathGame {
 		
 		assertTrue(sut.cubeRoot(64));
 	}
+	
+	@Test
+	void mediumQuestionsShouldReturnAScore() {
+		MathGame sut = new MathGame(new MathQuestions());
+		
+		int actual = sut.mediumQuestions();
+		
+		assertTrue(actual >= 0  && actual <= 5);
+	}
 }

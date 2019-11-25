@@ -50,7 +50,7 @@ public class MathGame {
 		return score;
 	}
 	
-	public void mediumQuestions() {
+	public int mediumQuestions() {
 		Random rand = new Random();
 		mediumAddition(rand.nextInt(30), rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
 		mediumSubtraction(rand.nextInt(200-100) + 100, rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
@@ -60,6 +60,7 @@ public class MathGame {
 		cube = question.cubeRoot(cube);
 		cube = cube * cube * cube;
 		cubeRoot(cube);
+		return -1;
 	}
 	
 	public void advancedQuestions() {
