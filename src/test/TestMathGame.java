@@ -288,4 +288,18 @@ class TestMathGame {
 		
 		assertTrue(sut.mediumDivision(20, 2, 2));
 	}
+	
+	@Test
+	void cubeRootShouldReturnTrue() {
+		MathQuestions mock = mock(MathQuestions.class);
+		MathGame sut = new MathGame(mock);
+		
+		String input = "4";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		when(mock.cubeRoot(anyInt())).thenReturn(4);
+		
+		assertTrue(sut.cubeRoot(64));
+	}
 }

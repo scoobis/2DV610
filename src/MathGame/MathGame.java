@@ -114,6 +114,10 @@ public class MathGame {
 		return validation(getInput(), answer);
 	}
 	
+	public boolean cubeRoot(int num) {
+		return false;
+	}
+	
 	public void mediumQuestions() {
 		
 	}
