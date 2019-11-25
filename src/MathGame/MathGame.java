@@ -48,6 +48,15 @@ public class MathGame {
 		return score;
 	}
 	
+	public void mediumQuestions() {
+		Random rand = new Random();
+		mediumAddition(rand.nextInt(30), rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
+	}
+	
+	public void advancedQuestions() {
+		
+	}
+	
 	public boolean simpleAddition(int num1, int num2) {
 		int answer = question.simpleAddition(num1, num2);
 		printSimple(num1, num2, "+");
@@ -118,14 +127,6 @@ public class MathGame {
 		int answer = question.cubeRoot(num);
 		
 		return validation(getInput(), answer);
-	}
-	
-	public void mediumQuestions() {
-		mediumAddition(1, 1, 1, 1);
-	}
-	
-	public void advancedQuestions() {
-		
 	}
 	
 	private boolean validation(String guess, int answer) {
