@@ -41,7 +41,7 @@ public class MathGame {
 		simpleAddition(rand.nextInt(50), rand.nextInt(50));
 		simpleSubtraction(rand.nextInt(80-40) + 40, rand.nextInt(40));
 		simpleMultiplication(rand.nextInt(10), rand.nextInt(10));
-		simpleDivision(1,2);
+		simpleDivision(rand.nextInt(100-20) + 100, rand.nextInt(20));
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {
