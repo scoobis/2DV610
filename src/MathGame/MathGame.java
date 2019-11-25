@@ -35,7 +35,7 @@ public class MathGame {
 		}
 	}
 	
-	public void simpleQuestions() {
+	public int simpleQuestions() {
 		Random rand = new Random();
 		
 		simpleAddition(rand.nextInt(50), rand.nextInt(50));
@@ -43,6 +43,8 @@ public class MathGame {
 		simpleMultiplication(rand.nextInt(10), rand.nextInt(10));
 		simpleDivision(rand.nextInt(100-20) + 100, rand.nextInt(20));
 		squareRoot(rand.nextInt(100));
+		
+		return 10;
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {

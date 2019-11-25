@@ -223,4 +223,13 @@ class TestMathGame {
 		
 		 verify(spy, times(1)).squareRoot(anyInt());
 	}
+	
+	@Test
+	void simpleQuestionsShouldReturnAScore() {
+		MathGame sut = new MathGame(new MathQuestions());
+		
+		int actual = sut.simpleQuestions();
+		
+		assertTrue(actual >= 0  && actual <= 5);
+	}
 }
