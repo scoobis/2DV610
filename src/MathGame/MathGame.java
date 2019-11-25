@@ -36,7 +36,9 @@ public class MathGame {
 	}
 	
 	public int simpleQuestions() {
-		simpleAddition(1, 2);
+		Random rand = new Random();
+		
+		simpleAddition(rand.nextInt(50), rand.nextInt(50));
 		return 0;
 	}
 	
