@@ -50,28 +50,28 @@ public class MathGame {
 	
 	public boolean simpleAddition(int num1, int num2) {
 		int answer = question.simpleAddition(num1, num2);
-		System.out.print(num1 + " + " + num2 + " = ");
+		printSimple(num1, num2, "+");
 		
 		return validation(getInput(), answer);
 	}
 	
 	public boolean simpleSubtraction(int num1, int num2) {
 		int answer = question.simpleSubtraction(num1, num2);
-		System.out.print(num1 + " - " + num2 + " = ");
+		printSimple(num1, num2, "-");
 		
 		return validation(getInput(), answer);
 	}
 	
 	public boolean simpleMultiplication(int num1, int num2) {
 		int answer =  question.simpleMultiplication(num1, num2);
-		System.out.print(num1 + " * " + num2 + " = ");
+		printSimple(num1, num2, "*");
 		
 		return validation(getInput(), answer);
 	}
 	
 	public boolean simpleDivision(int num1, int num2) {
 		int answer =  question.simpleDivision(num1, num2);
-		System.out.print(num1 + " / " + num2 + " = ");
+		printSimple(num1, num2, "/");
 		
 		return validation(getInput(), answer);
 	}
@@ -85,7 +85,7 @@ public class MathGame {
 	
 	public boolean mediumAddition(int num1, int num2, int num3, int num4) {
 		int answer = question.mediumAddition(num1, num2, num3, num4);
-		System.out.print(num1+ " + " +num2+ " + " +num3+ " + " +num4+ " = ");
+		printMedium(num1, num2, num3, num4, "+");
 		
 		return validation(getInput(), answer);
 	}
@@ -108,5 +108,13 @@ public class MathGame {
 	
 	private boolean validation(String guess, int answer) {
 		return answer == Integer.parseInt(guess);
+	}
+	
+	private void printSimple(int num1, int num2, String symbol) {
+		System.out.print(num1 + " "+ symbol +" " + num2 + " = ");
+	}
+	
+	private void printMedium(int num1, int num2, int num3, int num4, String symbol) {
+		System.out.print(num1+ " " +symbol+ " " +num2+ " " +symbol+ " " +num3+ " " +symbol+ " " +num4+ " = ");
 	}
 }
