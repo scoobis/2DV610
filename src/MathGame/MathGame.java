@@ -84,7 +84,9 @@ public class MathGame {
 	}
 	
 	public boolean mediumAddition(int num1, int num2, int num3, int num4) {
-		return question.mediumAddition(num1, num2, num3, num4) == 20;
+		int answer = question.mediumAddition(num1, num2, num3, num4);
+		String guess = getInput();
+		return answer == Integer.parseInt(guess);
 	}
 	
 	public void mediumQuestions() {
