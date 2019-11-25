@@ -83,8 +83,8 @@ public class MathGame {
 		return answer == Integer.parseInt(guess);
 	}
 	
-	public boolean mediumAddition(int num1, int num2) {
-		return false;
+	public boolean mediumAddition(int num1, int num2, int num3, int num4) {
+		return question.mediumAddition(num1, num2, num3, num4) == 20;
 	}
 	
 	public void mediumQuestions() {

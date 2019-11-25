@@ -234,16 +234,16 @@ class TestMathGame {
 	}
 	
 	@Test
-	void mediumQuestionsShouldCallMediumAddition() {
-		MathGame sut = new MathGame(new MathQuestions());
-		MathGame spy = spy(sut);
+	void mediumAdditionShouldReturnTrue() {
+		MathQuestions mock = mock(MathQuestions.class);
+		MathGame sut = new MathGame(mock);
 		
-		String input = "8";
+		String input = "20";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 		
-		 spy.simpleQuestions();
+		when(mock.mediumAddition(anyInt(), anyInt(), anyInt(), anyInt())).thenReturn(20);
 		
-		 verify(spy, times(1)).mediumAddition(anyInt(), anyInt());
+		assertTrue(sut.mediumAddition(5, 5, 5, 5));
 	}
 }
