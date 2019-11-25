@@ -164,4 +164,18 @@ class TestMathGame {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void simpleDivisionShouldReturnTrue() {
+		MathQuestions mock = mock(MathQuestions.class);
+		MathGame sut = new MathGame(mock);
+		
+		String input = "40";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		when(mock.simpleDivision(anyInt(), anyInt())).thenReturn(40);
+		
+		assertTrue(sut.simpleDivision(80, 2));
+	}
 }

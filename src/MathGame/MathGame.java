@@ -60,6 +60,10 @@ public class MathGame {
 		return answer == Integer.parseInt(guess);
 	}
 	
+	public boolean simpleDivision(int num1, int num2) {
+		return false;
+	}
+	
 	public void mediumQuestions() {
 		
 	}
