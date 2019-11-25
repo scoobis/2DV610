@@ -43,7 +43,9 @@ public class MathGame {
 		if (simpleSubtraction(rand.nextInt(80-40) + 40, rand.nextInt(40))) { score++; }
 		if (simpleMultiplication(rand.nextInt(10), rand.nextInt(10))) { score++; }
 		if (simpleDivision(rand.nextInt(100-20) + 20, rand.nextInt(20))) { score++; }
-		if (squareRoot(rand.nextInt(100))) { score++; }
+		int square = rand.nextInt(100);
+		square = square * square;
+		if (squareRoot(square)) { score++; }
 		
 		return score;
 	}
@@ -54,7 +56,10 @@ public class MathGame {
 		mediumSubtraction(rand.nextInt(200-100) + 100, rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
 		mediumMultiplication(rand.nextInt(10), rand.nextInt(10), rand.nextInt(10));
 		mediumDivision(rand.nextInt(200-100) + 100, rand.nextInt(10), rand.nextInt(10));
-		cubeRoot(64);
+		int cube = rand.nextInt(1000);
+		cube = question.cubeRoot(cube);
+		cube = cube * cube * cube;
+		cubeRoot(cube);
 	}
 	
 	public void advancedQuestions() {
