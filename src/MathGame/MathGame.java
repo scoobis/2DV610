@@ -35,11 +35,10 @@ public class MathGame {
 		}
 	}
 	
-	public int simpleQuestions() {
+	public void simpleQuestions() {
 		Random rand = new Random();
 		
 		simpleAddition(rand.nextInt(50), rand.nextInt(50));
-		return 0;
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {

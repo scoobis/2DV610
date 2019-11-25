@@ -167,4 +167,18 @@ class TestMathGame {
 		
 		 verify(spy, times(1)).simpleAddition(anyInt(), anyInt());
 	}
+	
+	@Test
+	void simpleQuestionsShouldCallSimpleSubtraction() {
+		MathGame sut = new MathGame(new MathQuestions());
+		MathGame spy = spy(sut);
+		
+		String input = "8";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		 spy.simpleQuestions();
+		
+		 verify(spy, times(1)).simpleSubtraction(anyInt(), anyInt());
+	}
 }
