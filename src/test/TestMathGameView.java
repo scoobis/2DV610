@@ -92,5 +92,18 @@ class TestMathGameView {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void mediumAdditionShouldDisplayQuestion() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    MathGame sut = new MathGame(new MathQuestions());
+	    sut.mediumAddition(5, 5, 5, 5);
+	    
+	    String expected = "5 + 5 + 5 + 5 = ";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 
 }
