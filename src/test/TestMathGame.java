@@ -178,4 +178,21 @@ class TestMathGame {
 		
 		assertTrue(sut.simpleDivision(80, 2));
 	}
+	
+	@Test
+	void simpleDivisionShouldDisplayQuestion() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    String input = "40";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    MathGame sut = new MathGame(new MathQuestions());
+	    sut.simpleDivision(80, 2);
+	    
+	    String expected = "80 / 2 = ";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 }
