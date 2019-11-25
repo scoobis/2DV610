@@ -127,4 +127,18 @@ class TestMathCalls {
 		
 		 verify(spy, times(1)).mediumMultiplication(anyInt(), anyInt(), anyInt());
 	}
+	
+	@Test
+	void mediumQuestionsShouldCallMediumDivision() {
+		MathGame sut = new MathGame(new MathQuestions());
+		MathGame spy = spy(sut);
+		
+		String input = "8";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		 spy.mediumQuestions();
+		
+		 verify(spy, times(1)).mediumDivision(anyInt(), anyInt(), anyInt());
+	}
 }
