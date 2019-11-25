@@ -68,7 +68,9 @@ public class MathGame {
 	}
 	
 	public boolean squareRoot(int num) {
-		return question.squareRoot(num) == 9;
+		int answer = question.squareRoot(num);
+		String guess = getInput();
+		return answer == Integer.parseInt(guess);
 	}
 	
 	public void mediumQuestions() {
