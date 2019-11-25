@@ -147,4 +147,21 @@ class TestMathGame {
 		
 		assertTrue(sut.simpleMultiplication(4, 5));
 	}
+	
+	@Test
+	void simpleMultiplicationShouldDisplayQuestion() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    String input = "25";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    MathGame sut = new MathGame(new MathQuestions());
+	    sut.simpleMultiplication(5, 5);
+	    
+	    String expected = "5 * 5 = ";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 }
