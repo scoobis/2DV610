@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		MathGame g = new MathGame(new MathQuestions());
-		g.simpleQuestions();
+		g.mediumQuestions();
 		
 		RandomNumberGame randomNumberGame = new RandomNumberGame(new RandomNumber());
 		

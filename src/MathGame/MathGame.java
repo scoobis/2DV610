@@ -53,6 +53,8 @@ public class MathGame {
 		mediumAddition(rand.nextInt(30), rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
 		mediumSubtraction(rand.nextInt(200-100) + 100, rand.nextInt(30), rand.nextInt(30), rand.nextInt(30));
 		mediumMultiplication(rand.nextInt(10), rand.nextInt(10), rand.nextInt(10));
+		mediumDivision(rand.nextInt(200-100) + 100, rand.nextInt(10), rand.nextInt(10));
+		cubeRoot(64);
 	}
 	
 	public void advancedQuestions() {
