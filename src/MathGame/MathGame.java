@@ -91,7 +91,7 @@ public class MathGame {
 	}
 	
 	public boolean mediumSubtraction(int num1, int num2, int num3, int num4) {
-		return false;
+		return question.mediumSubtraction(num1, num2, num3, num4) == 20;
 	}
 	
 	public void mediumQuestions() {
