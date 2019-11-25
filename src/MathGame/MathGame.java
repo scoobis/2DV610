@@ -93,7 +93,7 @@ public class MathGame {
 	public boolean mediumSubtraction(int num1, int num2, int num3, int num4) {
 		int answer = question.mediumSubtraction(num1, num2, num3, num4);
 		
-		System.out.print("5 - 5 - 5 - 5 = ");
+		printMedium(num1, num2, num3, num4, "-");
 		
 		return validation(getInput(), answer);
 	}
@@ -101,7 +101,7 @@ public class MathGame {
 	public boolean mediumMultiplication(int num1, int num2, int num3) {
 		int answer = question.mediumMultiplication(num1, num2, num3);
 		
-		System.out.print("5 * 5 * 5 = ");
+		printMediumShort(num1, num2, num3, "*");
 		
 		return validation(getInput(), answer);
 	}
@@ -124,5 +124,9 @@ public class MathGame {
 	
 	private void printMedium(int num1, int num2, int num3, int num4, String symbol) {
 		System.out.print(num1+ " " +symbol+ " " +num2+ " " +symbol+ " " +num3+ " " +symbol+ " " +num4+ " = ");
+	}
+	
+	private void printMediumShort(int num1, int num2, int num3, String symbol) {
+		System.out.print(num1+ " " +symbol+ " " +num2+ " " +symbol+ " " +num3+ " = ");
 	}
 }
