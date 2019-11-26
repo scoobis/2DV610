@@ -159,6 +159,10 @@ class TestMathCalls {
 		MathGame sut = new MathGame(new MathQuestions());
 		MathGame spy = spy(sut);
 		
+		String input = "2";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
 		 spy.run();
 		
 		 verify(spy).printMenu();
