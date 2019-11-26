@@ -66,13 +66,27 @@ class TestGameController {
 	}
 	
 	@Test
-	void optionShoudlReturnFalseIfThree() {
+	void optionShouldReturnFalseIfThree() {
 		GameController sut = new GameController();
 		String input = "3";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 	    
 		assertFalse(sut.options());
+	}
+	
+	@Test
+	void optionShouldCallRunMath() {
+		GameController sut = new GameController();
+		GameController spy = spy(sut);
+		
+		String input = "2";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    spy.options();
+		
+		verify(spy).runMath();
 	}
 
 }

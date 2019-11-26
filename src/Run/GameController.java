@@ -23,4 +23,8 @@ public class GameController {
 		
 		return !(option == 3);
 	}
+	
+	public void runMath() {
+		
+	}
 }
