@@ -72,7 +72,7 @@ class TestGameController {
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 	    
-		assertTrue(sut.options());
+		assertFalse(sut.options());
 	}
 
 }
