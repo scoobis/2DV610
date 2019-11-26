@@ -33,8 +33,7 @@ public class MathGame {
 	}
 	
 	public void run() {
-		setDifficulity(1);
-		printMenu();
+		setDifficulity(Integer.parseInt(printMenu()));
 	}
 	
 	public int simpleQuestions() {
