@@ -65,7 +65,7 @@ class TestGameController {
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 	    
-	    spy.options();
+	    spy.option();
 		
 		verify(spy).getInput();
 	}
@@ -77,7 +77,7 @@ class TestGameController {
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 	    
-		assertFalse(sut.options());
+		assertFalse(sut.option());
 	}
 	
 	@Test
@@ -89,7 +89,7 @@ class TestGameController {
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 	    
-	    spy.options();
+	    spy.option();
 		
 		verify(spy).runMath();
 	}
@@ -103,7 +103,7 @@ class TestGameController {
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 	    
-	    spy.options();
+	    spy.option();
 		
 		verify(spy).runGuessNumber();
 	}
