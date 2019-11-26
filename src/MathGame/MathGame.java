@@ -33,6 +33,7 @@ public class MathGame {
 	}
 	
 	public void run() {
+		setDifficulity(1);
 		printMenu();
 	}
 	
