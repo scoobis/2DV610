@@ -19,6 +19,6 @@ public class GameController {
 	}
 	
 	public void options() {
-		printMainMenu();
+		int option = Integer.parseInt(printMainMenu());
 	}
 }
