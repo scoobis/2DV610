@@ -7,4 +7,8 @@ public class GameController {
 		System.out.print("1. MathGame\n");
 		System.out.print("2. Guess the number\n");
 	}
+	
+	public String getInput() {
+		return null;
+	}
 }
