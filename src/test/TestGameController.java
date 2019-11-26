@@ -88,5 +88,19 @@ class TestGameController {
 		
 		verify(spy).runMath();
 	}
+	
+	@Test
+	void optionShouldCallRunGuessNumberIfTwo() {
+		GameController sut = new GameController();
+		GameController spy = spy(sut);
+		
+		String input = "1";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    spy.options();
+		
+		verify(spy).runGuessNumber();
+	}
 
 }

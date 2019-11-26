@@ -20,12 +20,16 @@ public class GameController {
 	
 	public boolean options() {
 		int option = Integer.parseInt(printMainMenu());
-		if (option == 1) { runMath(); };
+		if (option == 1) { runMath(); }
 		
 		return !(option == 3);
 	}
 	
 	public void runMath() {
+		
+	}
+	
+	public void runGuessNumber() {
 		
 	}
 }
