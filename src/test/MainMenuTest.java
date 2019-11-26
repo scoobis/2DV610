@@ -1,5 +1,9 @@
 package test;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Matchers.anyInt;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -36,6 +40,20 @@ class MainMenuTest {
 	    System.setIn(in);
 
 	    assertEquals(input, sut.getInput());
+	}
+	
+	@Test
+	void printMainMenuShouldReturngetInput() {
+		GameController sut = new GameController();
+		GameController spy = spy(sut);
+		
+		String input = "2";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    spy.printMainMenu();
+		
+		 verify(spy).getInput();
 	}
 
 }
