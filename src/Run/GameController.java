@@ -21,6 +21,6 @@ public class GameController {
 	public boolean options() {
 		int option = Integer.parseInt(printMainMenu());
 		
-		return false;
+		return !(option == 3);
 	}
 }
