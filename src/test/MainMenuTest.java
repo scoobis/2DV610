@@ -1,8 +1,6 @@
 package test;
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Matchers.anyInt;
 import static org.mockito.Mockito.spy;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 import java.io.ByteArrayInputStream;
@@ -11,9 +9,6 @@ import java.io.InputStream;
 import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
-
-import MathGame.MathGame;
-import MathGame.MathQuestions;
 import Run.GameController;
 
 class MainMenuTest {
@@ -26,7 +21,7 @@ class MainMenuTest {
 	    GameController sut = new GameController();
 	    sut.printMainMenu();
 	    
-	    String expected = "Pick a game!\n1. MathGame\n2. Guess the number\n";
+	    String expected = "Pick a game!\n1. MathGame\n2. Guess the number\n3. Exit\n";
 	    
 	    assertEquals(expected, outContent.toString());
 	}

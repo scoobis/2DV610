@@ -8,8 +8,8 @@ public class GameController {
 		System.out.print("Pick a game!\n");
 		System.out.print("1. MathGame\n");
 		System.out.print("2. Guess the number\n");
-		getInput();
-		return "";
+		System.out.print("3. Exit\n");
+		return getInput();
 	}
 	
 	public String getInput() {
