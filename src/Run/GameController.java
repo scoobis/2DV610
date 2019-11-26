@@ -9,6 +9,6 @@ public class GameController {
 	}
 	
 	public String getInput() {
-		return null;
+		return "2";
 	}
 }
