@@ -30,7 +30,10 @@ public class GameController {
 		int option = Integer.parseInt(printMainMenu());
 		if (option == 1) { runMath(); }
 		else if (option == 2) { runGuessNumber(); }
-		else if (option == 3) { System.out.print("Exit...");return false; }
+		else if (option == 3) { 
+		System.out.print("Exit...");
+		return false; 
+		}
 		return true;
 	}
 	
