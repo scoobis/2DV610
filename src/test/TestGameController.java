@@ -11,7 +11,7 @@ import java.io.PrintStream;
 import org.junit.jupiter.api.Test;
 import Run.GameController;
 
-class MainMenuTest {
+class TestGameController {
 
 	@Test
 	void printMainMenuShouldPrintGamesToPlayAndExit() {
@@ -48,7 +48,21 @@ class MainMenuTest {
 	    
 	    spy.printMainMenu();
 		
-		 verify(spy).getInput();
+		verify(spy).getInput();
+	}
+	
+	@Test
+	void optionsShouldCallPrintMainMenu() {
+		GameController sut = new GameController();
+		GameController spy = spy(sut);
+		
+		String input = "2";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    spy.options();
+		
+		verify(spy).getInput();
 	}
 
 }

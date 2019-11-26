@@ -17,4 +17,8 @@ public class GameController {
 		while(s.hasNextLine()) { return s.nextLine(); }
 		return "-1";
 	}
+	
+	public void options() {
+		
+	}
 }
