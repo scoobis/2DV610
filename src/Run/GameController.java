@@ -21,6 +21,7 @@ public class GameController {
 	public boolean options() {
 		int option = Integer.parseInt(printMainMenu());
 		if (option == 1) { runMath(); }
+		runGuessNumber();
 		
 		return !(option == 3);
 	}
