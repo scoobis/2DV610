@@ -1,5 +1,7 @@
 package Run;
 
+import java.util.Scanner;
+
 public class GameController {
 	
 	public void printMainMenu() {
@@ -9,6 +11,8 @@ public class GameController {
 	}
 	
 	public String getInput() {
-		return "2";
+		Scanner s = new Scanner(System.in);
+		while(s.hasNextLine()) { return s.nextLine(); }
+		return "-1";
 	}
 }
