@@ -2,7 +2,15 @@ package Run;
 
 import java.util.Scanner;
 
+import MathGame.MathGame;
+
 public class GameController {
+	
+	MathGame mathGame;
+	
+	public GameController(MathGame mathGame) {
+		this.mathGame = mathGame;
+	}
 	
 	public String printMainMenu() {
 		System.out.print("Pick a game!\n");

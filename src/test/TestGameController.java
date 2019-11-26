@@ -1,5 +1,6 @@
 package test;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Matchers.anyInt;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
@@ -9,6 +10,9 @@ import java.io.InputStream;
 import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
+
+import MathGame.MathGame;
+import MathGame.MathQuestions;
 import Run.GameController;
 
 class TestGameController {
@@ -18,7 +22,7 @@ class TestGameController {
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));
 	    
-	    GameController sut = new GameController();
+	    GameController sut = new GameController(new MathGame(new MathQuestions()));
 	    sut.printMainMenu();
 	    
 	    String expected = "Pick a game!\n1. MathGame\n2. Guess the number\n3. Exit\n";
@@ -28,7 +32,7 @@ class TestGameController {
 	
 	@Test
 	void getInputShouldReturnOption() {
-		GameController sut = new GameController();
+		GameController sut = new GameController(new MathGame(new MathQuestions()));
 
 	    String input = "2";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
@@ -39,7 +43,7 @@ class TestGameController {
 	
 	@Test
 	void printMainMenuShouldReturngetInput() {
-		GameController sut = new GameController();
+		GameController sut = new GameController(new MathGame(new MathQuestions()));
 		GameController spy = spy(sut);
 		
 		String input = "2";
@@ -53,7 +57,7 @@ class TestGameController {
 	
 	@Test
 	void optionsShouldCallPrintMainMenu() {
-		GameController sut = new GameController();
+		GameController sut = new GameController(new MathGame(new MathQuestions()));
 		GameController spy = spy(sut);
 		
 		String input = "2";
@@ -67,7 +71,7 @@ class TestGameController {
 	
 	@Test
 	void optionShouldReturnFalseIfThree() {
-		GameController sut = new GameController();
+		GameController sut = new GameController(new MathGame(new MathQuestions()));
 		String input = "3";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
@@ -77,7 +81,7 @@ class TestGameController {
 	
 	@Test
 	void optionShouldCallRunMathIfOne() {
-		GameController sut = new GameController();
+		GameController sut = new GameController(new MathGame(new MathQuestions()));
 		GameController spy = spy(sut);
 		
 		String input = "1";
@@ -91,7 +95,7 @@ class TestGameController {
 	
 	@Test
 	void optionShouldCallRunGuessNumberIfTwo() {
-		GameController sut = new GameController();
+		GameController sut = new GameController(new MathGame(new MathQuestions()));
 		GameController spy = spy(sut);
 		
 		String input = "1";
@@ -101,6 +105,20 @@ class TestGameController {
 	    spy.options();
 		
 		verify(spy).runGuessNumber();
+	}
+	
+	@Test
+	void runShouldCallSetDifficulity() {
+		MathGame game = new MathGame(new MathQuestions());
+		GameController sut = new GameController(game);
+		
+		String input = "2";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
+		 sut.runMath();
+		
+		 verify(game).run();
 	}
 
 }
