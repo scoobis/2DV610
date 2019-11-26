@@ -64,5 +64,15 @@ class TestGameController {
 		
 		verify(spy).getInput();
 	}
+	
+	@Test
+	void optionShoudlReturnFalseIfThree() {
+		GameController sut = new GameController();
+		String input = "3";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+		assertTrue(sut.options());
+	}
 
 }

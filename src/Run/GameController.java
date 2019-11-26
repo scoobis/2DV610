@@ -18,7 +18,9 @@ public class GameController {
 		return "-1";
 	}
 	
-	public void options() {
+	public boolean options() {
 		int option = Integer.parseInt(printMainMenu());
+		
+		return true;
 	}
 }
