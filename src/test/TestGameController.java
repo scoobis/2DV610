@@ -117,5 +117,22 @@ class TestGameController {
 		
 		 verify(game).run();
 	}
+	
+	@Test
+	void optionShouldPrintExitIfThree() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    String input = "3";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    GameController sut = new GameController(new MathGame(new MathQuestions()));
+	    sut.option();
+	    
+	    String expected = "Exit...";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 
 }
