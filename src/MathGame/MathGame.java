@@ -15,7 +15,6 @@ public class MathGame {
 		System.out.print("Set Level\n");
 		System.out.print("1. Simple\n");
 		System.out.print("2. Medium\n");
-		System.out.print("3. Advanced\n");
 		return getInput();
 	}
 	
@@ -31,6 +30,10 @@ public class MathGame {
 		} else if (option == 2) {
 			mediumQuestions();
 		}
+	}
+	
+	public void run() {
+		
 	}
 	
 	public int simpleQuestions() {

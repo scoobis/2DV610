@@ -153,4 +153,14 @@ class TestMathCalls {
 		
 		 verify(spy, times(1)).cubeRoot(anyInt());
 	}
+	
+	@Test
+	void runShouldCallPrintMenu() {
+		MathGame sut = new MathGame(new MathQuestions());
+		MathGame spy = spy(sut);
+		
+		 spy.run();
+		
+		 verify(spy).printMenu();
+	}
 }
