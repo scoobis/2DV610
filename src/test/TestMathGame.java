@@ -23,7 +23,7 @@ class TestMathGame {
 	    MathGame sut = new MathGame(new MathQuestions());
 	    sut.printMenu();
 	    
-	    String expected = "Set Level\n1. Simple\n2. Medium\n3. Advanced\n";
+	    String expected = "Set Level\n1. Simple\n2. Medium\n";
 	    
 	    assertEquals(expected, outContent.toString());
 	}
@@ -72,16 +72,6 @@ class TestMathGame {
 		spy.setDifficulity(2);
 		
 		verify(spy).mediumQuestions();
-	}
-	
-	@Test
-	void setDifficulityShouldCallAdvancedQuestions() {
-		MathGame sut = new MathGame(new MathQuestions());
-		MathGame spy = spy(sut);
-		
-		spy.setDifficulity(3);
-		
-		verify(spy).advancedQuestions();
 	}
 	
 	@Test

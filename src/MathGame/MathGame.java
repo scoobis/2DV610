@@ -30,8 +30,6 @@ public class MathGame {
 			simpleQuestions();
 		} else if (option == 2) {
 			mediumQuestions();
-		} else if (option == 3) {
-			advancedQuestions();
 		}
 	}
 	
@@ -64,10 +62,6 @@ public class MathGame {
 		cube = cube * cube * cube;
 		if (cubeRoot(cube)) { score++; }
 		return score;
-	}
-	
-	public void advancedQuestions() {
-		
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {
