@@ -130,7 +130,8 @@ class TestGameController {
 	    GameController sut = new GameController(new MathGame(new MathQuestions()));
 	    sut.option();
 	    
-	    String expected = "Exit...";
+	    // Needs all the other out prints aswell since it is called prior to exit
+	    String expected = "Pick a game!\n1. MathGame\n2. Guess the number\n3. Exit\nExit...";
 	    
 	    assertEquals(expected, outContent.toString());
 	}
