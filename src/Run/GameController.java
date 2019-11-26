@@ -20,7 +20,7 @@ public class GameController {
 	
 	public boolean options() {
 		int option = Integer.parseInt(printMainMenu());
-		runMath();
+		if (option == 1) { runMath(); };
 		
 		return !(option == 3);
 	}

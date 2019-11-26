@@ -76,11 +76,11 @@ class TestGameController {
 	}
 	
 	@Test
-	void optionShouldCallRunMath() {
+	void optionShouldCallRunMathIfOne() {
 		GameController sut = new GameController();
 		GameController spy = spy(sut);
 		
-		String input = "2";
+		String input = "1";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 	    
