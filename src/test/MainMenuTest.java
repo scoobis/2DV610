@@ -1,12 +1,11 @@
 package test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
 import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
+import Run.GameController;
 
 class MainMenuTest {
 
@@ -15,9 +14,8 @@ class MainMenuTest {
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));
 	    
-	    String input = "1";
-	    InputStream in = new ByteArrayInputStream(input.getBytes());
-	    System.setIn(in);
+	    GameController sut = new GameController();
+	    sut.printMainMenu();
 	    
 	    String expected = "Pick a game!\n1. MathGame\n2. Guess the number\n";
 	    
