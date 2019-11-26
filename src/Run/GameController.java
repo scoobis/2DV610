@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 public class GameController {
 	
-	public void printMainMenu() {
+	public String printMainMenu() {
 		System.out.print("Pick a game!\n");
 		System.out.print("1. MathGame\n");
 		System.out.print("2. Guess the number\n");
+		getInput();
+		return "";
 	}
 	
 	public String getInput() {
