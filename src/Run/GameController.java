@@ -35,7 +35,7 @@ public class GameController {
 	}
 	
 	public void runMath() {
-		
+		mathGame.run();
 	}
 	
 	public void runGuessNumber() {

@@ -14,6 +14,7 @@ import org.junit.jupiter.api.Test;
 import MathGame.MathGame;
 import MathGame.MathQuestions;
 import Run.GameController;
+import static org.mockito.Mockito.*;
 
 class TestGameController {
 
@@ -98,7 +99,7 @@ class TestGameController {
 		GameController sut = new GameController(new MathGame(new MathQuestions()));
 		GameController spy = spy(sut);
 		
-		String input = "1";
+		String input = "2";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 	    
@@ -108,13 +109,9 @@ class TestGameController {
 	}
 	
 	@Test
-	void runShouldCallSetDifficulity() {
-		MathGame game = new MathGame(new MathQuestions());
+	void runMathShouldCallRunFromMathGame() {
+		MathGame game = mock(MathGame.class);
 		GameController sut = new GameController(game);
-		
-		String input = "2";
-	    InputStream in = new ByteArrayInputStream(input.getBytes());
-	    System.setIn(in);
 		
 		 sut.runMath();
 		
