@@ -2,14 +2,17 @@ package Run;
 
 import java.util.Scanner;
 
+import GuessNumber.RandomNumberGame;
 import MathGame.MathGame;
 
 public class GameController {
 	
 	MathGame mathGame;
+	RandomNumberGame numberGame;
 	
-	public GameController(MathGame mathGame) {
+	public GameController(MathGame mathGame, RandomNumberGame numberGame) {
 		this.mathGame = mathGame;
+		this.numberGame = numberGame;
 	}
 	
 	public String printMainMenu() {
@@ -42,6 +45,5 @@ public class GameController {
 	}
 	
 	public void runGuessNumber() {
-		
 	}
 }

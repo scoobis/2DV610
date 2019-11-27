@@ -11,6 +11,8 @@ import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
 
+import GuessNumber.RandomNumber;
+import GuessNumber.RandomNumberGame;
 import MathGame.MathGame;
 import MathGame.MathQuestions;
 import Run.GameController;
@@ -23,7 +25,7 @@ class TestGameController {
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));
 	    
-	    GameController sut = new GameController(new MathGame(new MathQuestions()));
+	    GameController sut = new GameController(new MathGame(new MathQuestions()), null);
 	    sut.printMainMenu();
 	    
 	    String expected = "Pick a game!\n1. MathGame\n2. Guess the number\n3. Exit\n";
@@ -33,7 +35,7 @@ class TestGameController {
 	
 	@Test
 	void getInputShouldReturnOption() {
-		GameController sut = new GameController(new MathGame(new MathQuestions()));
+		GameController sut = new GameController(new MathGame(new MathQuestions()), null);
 
 	    String input = "2";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
@@ -44,7 +46,7 @@ class TestGameController {
 	
 	@Test
 	void printMainMenuShouldReturngetInput() {
-		GameController sut = new GameController(new MathGame(new MathQuestions()));
+		GameController sut = new GameController(new MathGame(new MathQuestions()), null);
 		GameController spy = spy(sut);
 		
 		String input = "2";
@@ -58,10 +60,10 @@ class TestGameController {
 	
 	@Test
 	void optionsShouldCallPrintMainMenu() {
-		GameController sut = new GameController(new MathGame(new MathQuestions()));
+		GameController sut = new GameController(new MathGame(new MathQuestions()), null);
 		GameController spy = spy(sut);
 		
-		String input = "2";
+		String input = "4";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 	    
@@ -72,7 +74,7 @@ class TestGameController {
 	
 	@Test
 	void optionShouldReturnFalseIfThree() {
-		GameController sut = new GameController(new MathGame(new MathQuestions()));
+		GameController sut = new GameController(new MathGame(new MathQuestions()), null);
 		String input = "3";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
@@ -82,7 +84,7 @@ class TestGameController {
 	
 	@Test
 	void optionShouldCallRunMathIfOne() {
-		GameController sut = new GameController(new MathGame(new MathQuestions()));
+		GameController sut = new GameController(new MathGame(new MathQuestions()), null);
 		GameController spy = spy(sut);
 		
 		String input = "1";
@@ -96,7 +98,8 @@ class TestGameController {
 	
 	@Test
 	void optionShouldCallRunGuessNumberIfTwo() {
-		GameController sut = new GameController(new MathGame(new MathQuestions()));
+		RandomNumberGame mock = mock(RandomNumberGame.class);
+		GameController sut = new GameController(new MathGame(new MathQuestions()), mock);
 		GameController spy = spy(sut);
 		
 		String input = "2";
@@ -111,7 +114,7 @@ class TestGameController {
 	@Test
 	void runMathShouldCallRunFromMathGame() {
 		MathGame game = mock(MathGame.class);
-		GameController sut = new GameController(game);
+		GameController sut = new GameController(game, null);
 		
 		 sut.runMath();
 		
@@ -127,13 +130,23 @@ class TestGameController {
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 	    
-	    GameController sut = new GameController(new MathGame(new MathQuestions()));
+	    GameController sut = new GameController(new MathGame(new MathQuestions()), null);
 	    sut.option();
 	    
 	    // Needs all the other out prints aswell since it is called prior to exit
 	    String expected = "Pick a game!\n1. MathGame\n2. Guess the number\n3. Exit\nExit...";
 	    
 	    assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	void runGuessNumberShouldCallRunFromNumberGame() {
+		RandomNumberGame game = mock(RandomNumberGame.class);
+		GameController sut = new GameController(new MathGame(null), game);
+		
+		 sut.runGuessNumber();
+		
+		 verify(game).run();
 	}
 
 }
