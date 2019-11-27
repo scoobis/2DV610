@@ -26,9 +26,9 @@ public class MathGame {
 	
 	public void setDifficulity(int option) {
 		if (option == 1) {
-			simpleQuestions();
+			displayScore(simpleQuestions());
 		} else if (option == 2) {
-			mediumQuestions();
+			displayScore(mediumQuestions());
 		}
 	}
 	
@@ -69,7 +69,7 @@ public class MathGame {
 	}
 	
 	public void displayScore(int score) {
-		System.out.print("Your score: 3/5");
+		System.out.print("Your score: "+score+"/5");
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {
