@@ -72,5 +72,9 @@ public class RandomNumberGame {
 			displayTooLow();
 		}
 	}
+	
+	public void run() {
+		
+	}
 }
 

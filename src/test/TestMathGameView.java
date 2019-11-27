@@ -178,7 +178,7 @@ class TestMathGameView {
 	    MathGame sut = new MathGame(new MathQuestions());
 	    sut.displayScore(3);
 	    
-	    String expected = "Your score: 3/5";
+	    String expected = "Your score: 3/5\n";
 	    
 	    assertEquals(expected, outContent.toString());
 	}

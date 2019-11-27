@@ -33,7 +33,6 @@ public class GameController {
 		else if (option == 3) { 
 		System.out.print("Exit...");
 		return false; 
-		
 		}
 		return true;
 	}

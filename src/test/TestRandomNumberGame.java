@@ -1,6 +1,9 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Matchers.anyInt;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -290,6 +293,16 @@ class TestRandomNumberGame {
 	    String expected = "Too low!\n";
 	    
 	    assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	void runshouldCallSetDifficulity() {
+		RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
+		RandomNumberGame spy = Mockito.spy(sut);
+		
+		spy.run();
+		
+		 verify(spy).setDifficulity();;
 	}
 
 }

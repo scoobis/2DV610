@@ -69,7 +69,7 @@ public class MathGame {
 	}
 	
 	public void displayScore(int score) {
-		System.out.print("Your score: "+score+"/5");
+		System.out.print("Your score: "+score+"/5\n");
 	}
 	
 	public boolean simpleAddition(int num1, int num2) {
