@@ -82,8 +82,8 @@ public class RandomNumberGame {
 		
 		// could not find a good way to test this...
 		guess = displayGuessNumber();
-		displayState(Integer.parseInt(guess), randNr);
 		if (guess != null) {
+			displayState(Integer.parseInt(guess), randNr);
 		while(!checkIfEqual(guessI, randNr)) {
 			guess = displayGuessNumber();
 			guessI = Integer.parseInt(guess);
