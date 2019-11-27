@@ -312,6 +312,10 @@ class TestRandomNumberGame {
 		RandomNumber mock = Mockito.mock(RandomNumber.class);
 		RandomNumberGame sut = new RandomNumberGame(mock);
 		
+		String input = "8";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
 		sut.run();
 		
 		verify(mock).getRandomNumber();

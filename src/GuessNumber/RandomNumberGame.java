@@ -75,6 +75,7 @@ public class RandomNumberGame {
 	
 	public void run() {
 		this.setDifficulity();
+		rand.getRandomNumber();
 	}
 }
 

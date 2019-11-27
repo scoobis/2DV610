@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class RandomNumber {
 	
-	int max = 1;
+	int max = 2;
 	int min = 1;
 	
 	public void setMaxNumber(int newMax) { max = newMax +1; }
