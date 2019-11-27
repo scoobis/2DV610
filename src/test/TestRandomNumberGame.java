@@ -1,8 +1,6 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Matchers.anyInt;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 import java.io.ByteArrayInputStream;
@@ -302,7 +300,7 @@ class TestRandomNumberGame {
 		
 		spy.run();
 		
-		 verify(spy).setDifficulity();;
+		verify(spy).setDifficulity();;
 	}
 
 }
