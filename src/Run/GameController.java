@@ -45,5 +45,6 @@ public class GameController {
 	}
 	
 	public void runGuessNumber() {
+		numberGame.run();
 	}
 }
