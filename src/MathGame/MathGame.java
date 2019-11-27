@@ -42,9 +42,10 @@ public class MathGame {
 		
 		if (simpleAddition(rand.nextInt(50), rand.nextInt(50))) { score++; }
 		if (simpleSubtraction(rand.nextInt(80-40) + 40, rand.nextInt(40))) { score++; }
-		if (simpleMultiplication(rand.nextInt(10), rand.nextInt(10))) { score++; }
-		if (simpleDivision(rand.nextInt(100-20) + 20, rand.nextInt(20))) { score++; }
+		if (simpleMultiplication(rand.nextInt(10)+1, rand.nextInt(10)+1)) { score++; }
+		if (simpleDivision(rand.nextInt(100-20) + 20, rand.nextInt(20)+1)) { score++; }
 		int square = rand.nextInt(100);
+		square = question.squareRoot(square);
 		square = square * square;
 		if (squareRoot(square)) { score++; }
 		
@@ -57,8 +58,8 @@ public class MathGame {
 		
 		if (mediumAddition(rand.nextInt(30), rand.nextInt(30), rand.nextInt(30), rand.nextInt(30))) { score++; }
 		if (mediumSubtraction(rand.nextInt(200-100) + 100, rand.nextInt(30), rand.nextInt(30), rand.nextInt(30))) { score++; }
-		if (mediumMultiplication(rand.nextInt(10), rand.nextInt(10), rand.nextInt(10))) { score++; }
-		if (mediumDivision(rand.nextInt(200-100) + 100, rand.nextInt(10), rand.nextInt(10))) { score++; }
+		if (mediumMultiplication(rand.nextInt(10)+1, rand.nextInt(10)+1, rand.nextInt(10)+1)) { score++; }
+		if (mediumDivision(rand.nextInt(200-100) + 100, rand.nextInt(10)+1, rand.nextInt(10)+1)) { score++; }
 		
 		int cube = rand.nextInt(1000);
 		cube = question.cubeRoot(cube);
