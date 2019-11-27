@@ -298,7 +298,7 @@ class TestRandomNumberGame {
 		RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
 		RandomNumberGame spy = Mockito.spy(sut);
 		
-		String input = "8";
+		String input = "1";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 		
@@ -312,7 +312,7 @@ class TestRandomNumberGame {
 		RandomNumber mock = Mockito.mock(RandomNumber.class);
 		RandomNumberGame sut = new RandomNumberGame(mock);
 		
-		String input = "8";
+		String input = "1";
 	    InputStream in = new ByteArrayInputStream(input.getBytes());
 	    System.setIn(in);
 		

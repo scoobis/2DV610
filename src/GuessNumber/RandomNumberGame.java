@@ -75,7 +75,20 @@ public class RandomNumberGame {
 	
 	public void run() {
 		this.setDifficulity();
-		rand.getRandomNumber();
+		int randNr = rand.getRandomNumber();
+		
+		String guess;
+		int guessI = 0;
+		
+		// could not find a good way to test this...
+		guess = displayGuessNumber();
+		if (guess != null) {
+		while(!checkIfEqual(guessI, randNr)) {
+			guess = displayGuessNumber();
+			guessI = Integer.parseInt(guess);
+			displayState(guessI, randNr);
+		}
+	}
 	}
 }
 
