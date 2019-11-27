@@ -298,6 +298,10 @@ class TestRandomNumberGame {
 		RandomNumberGame sut = new RandomNumberGame(new RandomNumber());
 		RandomNumberGame spy = Mockito.spy(sut);
 		
+		String input = "8";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+		
 		spy.run();
 		
 		verify(spy).setDifficulity();;
