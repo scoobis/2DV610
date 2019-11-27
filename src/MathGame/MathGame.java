@@ -137,6 +137,8 @@ public class MathGame {
 	public boolean cubeRoot(int num) {
 		int answer = question.cubeRoot(num);
 		
+		System.out.print("Cube root of 64 = ");
+		
 		return validation(getInput(), answer);
 	}
 	
