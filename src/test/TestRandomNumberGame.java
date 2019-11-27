@@ -304,7 +304,17 @@ class TestRandomNumberGame {
 		
 		spy.run();
 		
-		verify(spy).setDifficulity();;
+		verify(spy).setDifficulity();
+	}
+	
+	@Test
+	void runshouldCallgetRandomNumber() {
+		RandomNumber mock = Mockito.mock(RandomNumber.class);
+		RandomNumberGame sut = new RandomNumberGame(mock);
+		
+		sut.run();
+		
+		verify(mock).getRandomNumber();
 	}
 
 }
