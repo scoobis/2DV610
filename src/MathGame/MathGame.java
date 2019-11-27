@@ -68,6 +68,10 @@ public class MathGame {
 		return score;
 	}
 	
+	public void displayScore(int score) {
+		
+	}
+	
 	public boolean simpleAddition(int num1, int num2) {
 		int answer = question.simpleAddition(num1, num2);
 		printSimple(num1, num2, "+");

@@ -169,5 +169,18 @@ class TestMathGameView {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void displayScoreShouldShowScore() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    MathGame sut = new MathGame(new MathQuestions());
+	    sut.displayScore(3);
+	    
+	    String expected = "Your score: 3/5";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 
 }
