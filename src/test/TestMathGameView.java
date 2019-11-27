@@ -152,5 +152,22 @@ class TestMathGameView {
 	    
 	    assertEquals(expected, outContent.toString());
 	}
+	
+	@Test
+	void cubeRootShouldDisplayQuestion() {
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	    System.setOut(new PrintStream(outContent));
+	    
+	    String input = "1";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+	    
+	    MathGame sut = new MathGame(new MathQuestions());
+	    sut.cubeRoot(64);
+	    
+	    String expected = "Cube root of 64 = ";
+	    
+	    assertEquals(expected, outContent.toString());
+	}
 
 }

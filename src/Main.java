@@ -7,7 +7,6 @@ import Run.GameController;
 public class Main {
 	
 	public static void main(String[] args) {
-		
 		GameController g = new GameController(new MathGame(new MathQuestions()));
 		g.option();
 		

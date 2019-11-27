@@ -64,6 +64,7 @@ public class MathGame {
 		cube = question.cubeRoot(cube);
 		cube = cube * cube * cube;
 		if (cubeRoot(cube)) { score++; }
+		
 		return score;
 	}
 	
